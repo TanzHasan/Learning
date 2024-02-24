@@ -2,12 +2,12 @@
 
 Lots of people have opinions on OOP. I'm not experienced enough to have a good take on the matter. My goal is to change that, of course. I, too, want to declare that OOP is an anti-pattern.
 
-Below is a Super Basic class.
+Below is a super basic class.
 
 ```c++
 class SuperBasic {};
 ```
-It doesn't actually do anything so I'll make a less basic class.
+It doesn't actually do anything, so I'll make a less basic class.
 
 ```c++
 #include <iostream>
@@ -51,7 +51,7 @@ int main(){
 }
 ```
 
-This shows how to create 4 basic functions (constructor, copy, assignment, destructor) and running it will show how each of them of them are used. The destructor will be particularly important for preventing memory leaks, but that's not important for now. In addition there is a public method we can use to do something with the class.
+This shows how to create 4 basic functions (constructor, copy, assignment, destructor), and running it will show how each of them of them are used. The destructor will be particularly important for preventing memory leaks, but that's not important for now. In addition, there is a public method we can use to do something with the class.
 
 Let's say I want an object that inherits from this Basic class. The way to do that would be the following:
 
@@ -80,7 +80,7 @@ protected:
     ...
 ```
 
-Now when I try the below we I expect to get 2:
+Protected means it can be accessed by classes that inherit it. Now when I try the below we I expect to get 2:
 
 ```c++
 int main(){
@@ -112,7 +112,7 @@ public:
     ...
 ```
 
-Now everything works as intended. So far, this is has been a very cursory overview of how classes work and some basic inheritance. The last really important part of OOP is polymorphism. Traditionally this is taught with Animals eating or making noises. I'm going to gamble.
+Now everything works as intended. So far, this is has been a very cursory overview of how classes work and some basic inheritance. I'm now going to use this for a bigger example to show how this would be used in practice. Traditionally this is taught with Animals eating or making noises. I'm going to gamble.
 
 ```c++
 #include <vector>
@@ -258,7 +258,7 @@ public:
 };
 ```
 
-These classes can use all the methods of the abstract class and override the purely virtual play method. This is pretty useful especially when setting up something like the Casino class which will take all types of card games that can be played.
+These classes can use all the methods of the abstract class and override the purely virtual play method. Overriding play is a classic example of polymorphism, allowing objects of different classes to be treated as objects of a base class while still executing their own versions of the method. Polymorphism is very useful, especially when setting up something like the Casino class, which will take all types of Game objects. 
 
 ```c++
 class Casino {
@@ -290,7 +290,7 @@ int main() {
     BlackJack money;
     // losing.play(); //will throw errors
     // money.play();
-    // Game(); //Abstract class cannot be instantiated
+    // Game emptygame; //Abstract class cannot be instantiated
     vegas.startgame(losing);
     vegas.startgame(money);
     losing.play();
@@ -301,3 +301,47 @@ int main() {
 
 That covers the basic principles of OOP in C++. We could add more depth to the BlackJack and Poker classes, but that won't add anything OOP-wise. There are a few other topics to cover (vtables, vptrs, etc) which will be discussed in another Markdown file. Below are some of the terms used in this file and a little more depth about them:
 
+**Protected**: Data members of a class that are labeled protected can be accessed by inherited classes and friends.
+
+**Virtual**: Normally, C++ matches a function call with its definition at compile time. This is called static binding. Specifying virtual ensures that this is done in runtime instead. This is called dynamic binding. This is why doSomething printed 2 instead of 3 when we added the virtual keyword because it got dynamically linked Advanced::doSomething instead of Basic::doSomething even though it appeared to be a Basic pointer.
+
+**Purely Virtual**: The presence of these functions make a class abstract. Inherited classes must override this method if they want to be instantiated.
+
+**Abstract Classes**: These are classes that are designed specifically to be base classes and represent concepts (Game, Animal, Shape). They have one or more purely virtual functions. In our case, there is no way to play a Game. There are, however, ways to play Poker, Blackjack, and any other inherited classes.
+
+**Polymorphism**: The examples shown were example of runtime polymorphism using method overriding. There are other forms of polymorphism but they aren't OOP related. These are function overloading and method overloading which can be seen below.
+
+```c++
+//function overloading
+void func(int a){
+    std::cout << a << std::endl;
+}
+
+void func(int a, int b){ //same name different parameters
+    std::cout << a + b << std::endl;
+}
+
+int main() {
+    func(1);
+    func(1, 2);
+}
+```
+
+```c++
+//method overloading
+struct dummy{
+    void func(int a){
+        std::cout << a << std::endl;
+    }
+
+    void func(int a, int b){
+        std::cout << a + b << std::endl;
+    }
+};
+
+int main() {
+    dummy a;
+    a.func(1);
+    a.func(1, 2);
+}
+```
