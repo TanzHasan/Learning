@@ -1,5 +1,16 @@
 # A Record of Questions I've Implemented
 
+## Contest 926 - Question C. Sasha and the Casino
+This question was rated 1400 on a recent div-2 contest.
+
+This question is pretty mathematical so lets start with this: If you were a serial gambler with infinite money, playing roullette how would you make sure that you made out with at least one dollar? Well, the most surefire way is to bet one dollar on red and then keep betting half the amount of money you spent + 1 (amount_spent/2 + 1). Since you have infinite money, at some point you'll break even + 1.
+
+Back to the problem, Sasha always wins if he has infinite money but he wants to make back money if he wins on the Xth round. He needs a minimum amount of money to do that. If this minimum is less than what he has on round X he will win some money. Otherwise he will run out before he becomes profitable.
+
+At each round he needs to bet the amount_he_spent/(k - 1) + 1 to get more than he lost. Assuming we start by spending 1 we can just iterate through x rounds. Each round he spends just enough to make back what he would have lost, the worst case being he loses all X rounds (this is what we are looking for).
+
+[My code](Solutions/C.SashaAndCasino.py) has the implementation
+
 ## Contest 677 - Question F. Zero Remainder Sum
 This question was rated 2100 but it's 3 years old and a div-3 so it would probably be something like a 1600 div-2 right now, maybe even less.
 
