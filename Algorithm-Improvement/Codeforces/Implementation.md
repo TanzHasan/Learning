@@ -9,7 +9,7 @@ Back to the problem, Sasha always wins if he has infinite money but he wants to 
 
 At each round he needs to bet the amount_he_spent/(k - 1) + 1 to get more than he lost. Assuming we start by spending 1 we can just iterate through x rounds. Each round he spends just enough to make back what he would have lost, the worst case being he loses all X rounds (this is what we are looking for).
 
-[My code](Solutions/C.SashaAndCasino.py) has the implementation
+[My code](Solutions/C.SashaAndCasino.py) has the implementation.
 
 ## Contest 677 - Question F. Zero Remainder Sum
 This question was rated 2100 but it's 3 years old and a div-3 so it would probably be something like a 1600 div-2 right now, maybe even less.
