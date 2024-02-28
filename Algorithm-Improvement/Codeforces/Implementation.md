@@ -42,11 +42,11 @@ This was a tough question so the explanation is not as good as it can be. I will
 ## Contest 926 - [Question C. Sasha and the Casino](https://codeforces.com/contest/1929/problem/D)
 This question was rated 1400 on a recent div-2 contest.
 
-This question is pretty mathematical so lets start with this: If you were a serial gambler with infinite money, playing roullette how would you make sure that you made out with at least one dollar? Well, the most surefire way is to bet one dollar on red and then keep betting half the amount of money you spent + 1 (amount_spent/2 + 1). Since you have infinite money, at some point you'll break even + 1.
+This question is pretty mathematical so lets start with this: If you were a serial gambler with infinite money and playing roullette how would you make sure that you made out with at least one dollar? Well, the most surefire way is to bet one dollar on red and then keep betting half the amount of money you spent + 1 (amount_spent/2 + 1). Since you have infinite money, at some point you'll break even + 1.
 
 Back to the problem, Sasha always wins if he has infinite money but he wants to make back money if he wins on the Xth round. He needs a minimum amount of money to do that. If this minimum is less than what he has on round X he will win some money. Otherwise he will run out before he becomes profitable.
 
-At each round he needs to bet the amount_he_spent/(k - 1) + 1 to get more than he lost. Assuming I start by spending 1 I can just iterate through x rounds. Each round he spends just enough to make back what he would have lost, the worst case being he loses all X rounds (this is what I are looking for).
+At each round he needs to bet the amount_he_spent/(k - 1) + 1 to get more than he lost. The roulette here has more than 2 colors. Assuming I start by spending 1 I can just iterate through x rounds. Each round he spends just enough to make back what he would have lost, the worst case being he loses all X rounds (this is what I am looking for).
 
 [My code](Solutions/C.SashaAndCasino.py) has the implementation
 
