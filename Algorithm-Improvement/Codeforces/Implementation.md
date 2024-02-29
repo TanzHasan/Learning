@@ -1,5 +1,16 @@
 # A Record of Questions I've Implemented
 
+## Contest 926 - [Question D. Paprika and Permutation](https://codeforces.com/contest/1617/problem/C)
+
+This problem was rated 1300 in an old div-2. It's quite straightforward.
+
+If we have an item already in the permutation no need to change it.
+If we see an item twice it must replace something smaller than it by half.
+The reasoning for this is just that % can only create something of size n/2 - 1 or greater (try doing n%n-1 ... n%n/2-1, n%n/2).
+If we see an item that is new we must replace it with the same.
+
+My [code](Solutions/C.PaprikaandPermutation.py).
+
 ## Contest 926 - [Question D. Sasha and a Walk in the City](https://codeforces.com/contest/1929/problem/D)
 
 This problem was rated 1900 in a recent div-2. It's very hard.
