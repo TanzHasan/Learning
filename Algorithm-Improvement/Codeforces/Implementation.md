@@ -1,5 +1,20 @@
 # A Record of Questions I've Implemented
 
+## Contest 931 - [B. Yet Another Coin Problem](https://codeforces.com/contest/1934/problem/B)
+
+This problem is from a recent competition and hasn't been rated yet. I would probably put it in the 1000-1400 range.
+
+At first glance it seems possible to perform dynamic programming on this problem.
+This is a trap: the value of each number is 1e9. This will make your dp recurrence 1e9 * 5 which is way too much.
+
+What we can do is observe that 1 3 6 10 and 15 all have a common multiple of 30.
+Any sufficiently high number will require multiple 30s.
+This means we can just take many 30s as we need for free.
+This can lower our dp to a manageable size.
+Alternatively we can notice we will only ever want 2 10s, some number of 6s, etc and we can just use math to solve it.
+
+My [code](Solutions/B.YetAnotherCoinProblem.py) uses the dp followup.
+
 ## Contest 926 - [Question D. Paprika and Permutation](https://codeforces.com/contest/1617/problem/C)
 
 This problem was rated 1300 in an old div-2. It's quite straightforward.
