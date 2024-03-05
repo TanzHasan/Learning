@@ -60,6 +60,9 @@ When we try to call a virtual function we dereference the pointer and use the fu
 
 Virtual functions need the extra steps to load the function from a vtable. This naturally takes a little extra time.
 
-The real problem is that, since the compiler cannot know which functions are going to be called, it cannot inline or do many other optimizations. This is the primary cause of slowness and why templates are often used in settings where performance is critical. A stackexchange post going into more detail can be found [here](https://softwareengineering.stackexchange.com/questions/191637/in-c-why-and-how-are-virtual-functions-slower).
+The real problem is that, since the compiler cannot know which functions are going to be called, it cannot inline or do many other optimizations.
+This is the primary cause of slowness and why templates are often used in settings where performance is critical.
+A stackexchange post going into more detail can be found [here](https://softwareengineering.stackexchange.com/questions/191637/in-c-why-and-how-are-virtual-functions-slower).
 
-Some work has been done for runtime optimizations that can decrease the impact of the lack of compile time optimization: [Profile Guided Optimization](https://learn.microsoft.com/en-us/cpp/build/profile-guided-optimizations?view=msvc-170). I am not very familiar with it but it can allow for optimizations where the optimizer uses data from test runs to determine areas that need to be optimized.
+Some work has been done for runtime optimizations that can decrease the impact of the lack of compile time optimization: [Profile Guided Optimization](https://learn.microsoft.com/en-us/cpp/build/profile-guided-optimizations?view=msvc-170).
+I am not very familiar with it but it can allow for optimizations where the optimizer uses data from test runs to determine areas that need to be optimized.
