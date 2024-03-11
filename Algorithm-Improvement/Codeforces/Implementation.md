@@ -1,5 +1,36 @@
 # A Record of Questions I've Implemented
 
+## Contest 931 - [E. Sasha And Tree Cutting](https://codeforces.com/contest/1934/problem/B)
+
+This problem is from a recent competition is rated 2300. This is the highest rated problem I have ever done to date.
+
+This problem has several moving parts so lets break them down 1 by 1.
+First consider the various paths.
+Do you have to deal with these paths, and if so, how?
+We can get the edges of a path through a simple dfs.
+Now, let's try holding all the edges of every path in memory.
+What's the longest a path can be?
+The answer is n-1 if it is a big linked list, so the total number of edges would be O(n\*k) which is not great.
+We only want to color one edge so why do we need the entire edge set for every path?
+We can describe each edge by the number of paths that go through it.
+This way we don't have to consider n*k edges which have the same paths and as a result are functionally identical.
+We can represent each path as a bitset or integer of k bits where k is at most 20.
+An edge will have a binary value 101 if paths 0 and 2 goes through it and path 1 does not for example.
+
+Now, this might seem scary at first 2^20 (2^k) is only a little better than 100,000\*20 (n\*k) but it will become obvious that it's impossible to have 2^k possible path representations.
+Since this is a tree, each path has the possibilityof either joining or diverging from a new path and they can only do so once each time because you can't join and leave multiple times.
+So essentially, every time you add a new path, you add at most 2\*k more unique path bitsets.
+Thus we are upper bounded by (2\*k)\*k/2 and this number will be no more than 400 (we can also round up to 1000 and it will still be fine).
+
+Now once we have all the unique bitsets for the paths we have to find the minimal combination of which will allow for all paths to be taken.
+To do this we can perform a straightforward dp where we can either take or not take and edge.
+The dp is the simplest part of this problem, the states are dp(current_bitset, current_edge) = min(dp(current_bitset | current_edge, next_edge) + 1, dp(current_bitset, next_edge)).
+
+This solution will be, at worst, O(n\*k (2^k)\*(k^2)).
+The n\*k term comes from the dfs and the (2^k)\*(k^2) comes from dp(bitset, edges).
+
+My [code](Solutions/E.SashaAndTreeCutting.cpp) implements this dp.
+
 ## Contest 931 - [B. Yet Another Coin Problem](https://codeforces.com/contest/1934/problem/B)
 
 This problem is from a recent competition and hasn't been rated yet. I would probably put it in the 1000-1400 range.
