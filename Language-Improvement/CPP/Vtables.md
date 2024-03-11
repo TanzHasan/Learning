@@ -1,7 +1,7 @@
 # How does Virtual Work?
 
 ## What are Vtables and how are they represented?
-VTables (or virtual tables) are arrays of virtual functions.
+VTables (or virtual tables) are arrays of pointers to virtual functions.
 They allow C++ to support dynamic dispatch (or run-time method binding).
 Virtual functions are member functions of a C++ class that can be redefined in a child class.
 A pointer to a vtable will exist as a datamember of all classes with virtual functions.
@@ -54,11 +54,15 @@ Since we don't add any more virtual functions the table is still of size 3.
 Now, we can just use the same function pointers for method1 and method2, but we need to replace function pointer for method and any other things we might override.
 The pointer for derived class objects will be to this new vtable.
 
-When we try to call a virtual function we dereference the pointer and use the function pointer to call the function. This way we are able to figure out which function to use dynamically. A good explanation of what goes on under the hood and in the hardware can be found [here](http://www.dietmar-kuehl.de/mirror/c++-faq/virtual-functions.html#faq-20.4). Essentially there are three calls that go on in the hardware to fetch the location and load the function.
+When we try to call a virtual function we dereference the pointer and use the function pointer to call the function.
+This way we are able to figure out which function to use dynamically.
+A good explanation of what goes on under the hood and in the hardware can be found [here](http://www.dietmar-kuehl.de/mirror/c++-faq/virtual-functions.html#faq-20.4).
+Essentially there are three calls that go on in the hardware to fetch the location and load the function.
 
 ## Why are Virtual Functions slow?
 
-Virtual functions need the extra steps to load the function from a vtable. This naturally takes a little extra time.
+Virtual functions need the extra steps to load the function from a vtable.
+This naturally takes a little extra time.
 
 The real problem is that, since the compiler cannot know which functions are going to be called, it cannot inline or do many other optimizations.
 This is the primary cause of slowness and why templates are often used in settings where performance is critical.
