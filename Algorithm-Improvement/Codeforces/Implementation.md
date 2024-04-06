@@ -1,6 +1,6 @@
 # A Record of Questions I've Implemented
 
-## Contest 931 - [E. Sasha And Tree Cutting](https://codeforces.com/contest/1934/problem/B)
+## Contest 931 - [E. Sasha And Tree Cutting](https://codeforces.com/problemset/problem/1929/E)
 
 This problem is from a recent competition is rated 2300. This is the highest rated problem I have ever done to date.
 
