@@ -99,6 +99,8 @@ Take some time maybe 30m to 1 hour a day a few times a week and put it into Leet
 
 Once you finish that list you should be primarily do mediums and hard problems (I suggest the ratio of 20% Easy, 60% Medium, 20% Hard. Adjust as you get better). The analogy I like to give is you will never curl 60s if you only do a few reps of of 10s.
 
+You should also do contests because they force you to sit for hours and bash your head against a problem until it breaks. These problems are also new so it is one of the best technical mock interviews and you can either do old problems virtually (the inferior method) or do the competitions live on Saturdays and Sundays.
+
 Optionally you could also try your hand at Codeforces or USACO. These are significantly harder, and, in my opinion, more rewarding. They are also extremely overkill and less immediately useful. I would advise you to do Leetcode first.
 
 For context, once you can reliably solve hards you won't fail most leetcode interviews. For context, I have failed to solve problems in only two pure alorithmic interviews (I passed the first intervew, failed the second) for the entire hiring season of 2024. 
