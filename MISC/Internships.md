@@ -2,6 +2,25 @@
 
 If you are reading this, you have probably asked me how to get one, or someone sent this to you.
 
+# Table of Contents
+- [Internships](#internships)
+  - [Getting the Interview](#getting-the-interview)
+    - [How do you get your Application viewed?](#how-do-you-get-your-application-viewed)
+    - [How do you prevent your application from being tossed out?](#how-do-you-prevent-your-application-from-being-tossed-out)
+    - [How do I format my resume?](#how-do-i-format-my-resume)
+    - [How do I get more resume content?](#how-to-get-more-resume-content)
+    - [Skipping the line](#skipping-the-line)
+  - [Passing the Interview](#passing-the-interview)
+    - [Behavioral](#behavioral)
+    - [Leetcode Interviews](#leetcode-interviews)
+        - [How do you study?](#how-do-you-study)
+    - [Write A Lot of Code Interviews](#write-a-lot-of-code-interviews)
+    - [Design Intervews](#design-intervews)
+    - [Language Specific Interviews](#language-specific-interviews)
+    - [Systems Interviews](#systems-interviews)
+    - [Machine Learning Interviews](#machine-learning-interviews)
+  - [Closing](#closing)
+
 There are two components to finding an internship:
 
 1. Getting the Interview
@@ -46,7 +65,7 @@ If you have no experience you might find it useful to do any of the following:
 6. Unpaid internships. I hesitate to recommend this one, but if you can't do any of the above, providing free labor to a startup is a good way to get a foot in the door. That being said make sure you're either learning or having fun. You don't want to be doing these unless necessary.
 7. Get lucky. Self explanatory.
 
-Yes, these are hard. 150k+ in total compensation (This should be the lower bound if you put in effort. It is very possible to get significantly more.) out of college is more than enough incentive, however.
+Yes, these are hard. 120k+ in total compensation (This should be the lower bound if you put in effort. It is very possible to get significantly more.) out of college is more than enough incentive, however.
 
 ### Skipping the line
 
