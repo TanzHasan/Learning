@@ -2,22 +2,28 @@
 
 Lots of people have opinions on OOP. I'm not experienced enough to have a good take on the matter. My goal is to change that, of course. I, too, want to declare that OOP is an anti-pattern.
 
+
 Below is a super basic class.
+
 
 ```c++
 class SuperBasic {};
 ```
+
 It doesn't actually do anything, so I'll make a less basic class.
+
 
 ```c++
 #include <iostream>
 
 class Basic {
+
 private:
     int a;
     int b;
 public:
     //constructor
+
     Basic(int a, int b) : a(a), b(b) {
         std::cout << "Creating" << std::endl;
     }
@@ -50,6 +56,7 @@ int main(){
     std::cout << b.doSomething() << std::endl;
 }
 ```
+
 
 This shows how to create 4 basic functions (constructor, copy, assignment, destructor), and running it will show how each of them of them are used. The destructor will be particularly important for preventing memory leaks, but that's not important for now. In addition, there is a public method we can use to do something with the class.
 
