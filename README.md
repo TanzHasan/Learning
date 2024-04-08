@@ -8,10 +8,10 @@ Any LaTeX needs to be viewed in VSCode or another editor with the requisite exte
 
 # Material
 
-## [Algorithm-Improvement](Learning/Algorithm-Improvement/README.md)
+## [Algorithm-Improvement](/Algorithm-Improvement/README.md)
 
-## [Language-Improvement](Learning/Language-Improvement/README.md)
+## [Language-Improvement](/Language-Improvement/README.md)
 
-## [Math](Learning/Math/README.md)
+## [Math](/Math/README.md)
 
-## [MISC](Learning/MISC/README.md)
+## [MISC](/MISC/README.md)
