@@ -29,7 +29,7 @@ The dp is the simplest part of this problem, the states are dp(current_bitset, c
 This solution will be, at worst, O(n\*k (2^k)\*(k^2)).
 The n\*k term comes from the dfs and the (2^k)\*(k^2) comes from dp(bitset, edges).
 
-My [code](/Learning/Algorithm-Improvement/Codeforces/Solutions/E.SashaAndTreeCutting.cpp) implements this dp.
+My [code](/Algorithm-Improvement/Codeforces/Solutions/E.SashaAndTreeCutting.cpp) implements this dp.
 
 ## Contest 931 - [B. Yet Another Coin Problem](https://codeforces.com/contest/1934/problem/B)
 
@@ -44,7 +44,7 @@ This means we can just take many 30s as we need for free.
 This can lower our dp to a manageable size.
 Alternatively we can notice we will only ever want 2 10s, some number of 6s, etc and we can just use math to solve it.
 
-My [code](/Learning/Algorithm-Improvement/Codeforces/Solutions/B.YetAnotherCoinProblem.py) uses the dp followup.
+My [code](/Algorithm-Improvement/Codeforces/Solutions/B.YetAnotherCoinProblem.py) uses the dp followup.
 
 ## Contest 926 - [Question D. Paprika and Permutation](https://codeforces.com/contest/1617/problem/C)
 
@@ -55,7 +55,7 @@ If we see an item twice it must replace something smaller than it by half.
 The reasoning for this is just that % can only create something of size n/2 - 1 or greater (try doing n%n-1 ... n%n/2-1, n%n/2).
 If we see an item that is new we must replace it with the same.
 
-My [code](/Learning/Algorithm-Improvement/Codeforces/Solutions/C.PaprikaandPermutation.py).
+My [code](/Algorithm-Improvement/Codeforces/Solutions/C.PaprikaandPermutation.py).
 
 ## Contest 926 - [Question D. Sasha and a Walk in the City](https://codeforces.com/contest/1929/problem/D)
 
@@ -93,7 +93,7 @@ To do that, I just add 1 to our answer.
 
 Thus my answer is $\sum value[node] + 1$.
 
-My [code](/Learning/Algorithm-Improvement/Codeforces/Solutions/D.SashaandaWalkintheCity.cpp) shows how to implement this approach.
+My [code](/Algorithm-Improvement/Codeforces/Solutions/D.SashaandaWalkintheCity.cpp) shows how to implement this approach.
 This was a tough question so the explanation is not as good as it can be. I will revisit this soon
 
 ## Contest 926 - [Question C. Sasha and the Casino](https://codeforces.com/contest/1929/problem/D)
@@ -105,7 +105,7 @@ Back to the problem, Sasha always wins if he has infinite money but he wants to 
 
 At each round he needs to bet the amount_he_spent/(k - 1) + 1 to get more than he lost. The roulette here has more than 2 colors. Assuming I start by spending 1 I can just iterate through x rounds. Each round he spends just enough to make back what he would have lost, the worst case being he loses all X rounds (this is what I am looking for).
 
-[My code](/Learning/Algorithm-Improvement/Codeforces/Solutions/C.SashaAndCasino.py) has the implementation.
+[My code](/Algorithm-Improvement/Codeforces/Solutions/C.SashaAndCasino.py) has the implementation.
 
 ## Contest 677 - Question F. Zero Remainder Sum
 This question was rated 2100 but it's 3 years old and a div-3 so it would probably be something like a 1600 div-2 right now, maybe even less.
@@ -129,4 +129,4 @@ Obviously while this will give a correct answer, dp[row][ind][needed][num] is ve
 I can do better. Why do I need the exact number?
 Our number will work if the remainder of num + remainder of future nums is 0. So all I need to store is the num which is of size K (75) and considerably smaller.
 
-[My code](/Learning/Algorithm-Improvement/Codeforces/Solutions/F.ZeroRemainderSum.cpp) has a line by line breakdown detailed explanation.
+[My code](/Algorithm-Improvement/Codeforces/Solutions/F.ZeroRemainderSum.cpp) has a line by line breakdown detailed explanation.

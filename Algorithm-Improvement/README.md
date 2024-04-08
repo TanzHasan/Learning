@@ -2,8 +2,8 @@
 
 # Websites
 
-## [Leetcode](/Learning/Algorithm-Improvement/Leetcode/README.md)
+## [Leetcode](/Algorithm-Improvement/Leetcode)
 
-## [Codeforces](/Learning/Algorithm-Improvement/Codeforces/README.md)
+## [Codeforces](/Algorithm-Improvement/Codeforces)
 
-## [MISC](/Learning/Algorithm-Improvement/MISC/README.md)
+## [MISC](/Algorithm-Improvement/MISC)

@@ -2,10 +2,10 @@
 
 # Languages
 
-## [CPP](/Learning/Language-Improvement/CPP/README.md)
+## [CPP](/Language-Improvement/CPP)
 
-## [Python](/Learning/Language-Improvement/Python/README.md)
+## [Python](/Language-Improvement/Python)
 
-## [Rust](/Learning/Language-Improvement/Rust/README.md)
+## [Rust](/Language-Improvement/Rust)
 
-## [Typescript](/Learning/Language-Improvement/Typescript/README.md)
+## [Typescript](/Language-Improvement/Typescript)
