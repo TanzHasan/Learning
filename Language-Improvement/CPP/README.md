@@ -5,6 +5,6 @@ I want to explore templating, and develop better practices. In this section, I w
 
 ## History
 
-[Learned about Vtables](/Language-Improvement/CPP/Vtables.md)
+[Learned about Vtables](/Learning/Language-Improvement/CPP/Vtables)
 
-[Remembered Beginner OOP](/Language-Improvement/CPP/BeginnerOOP.md)
+[Remembered Beginner OOP](/Learning/Language-Improvement/CPP/BeginnerOOP)
