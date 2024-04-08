@@ -2,10 +2,10 @@
 
 # Languages
 
-## [CPP](/Language-Improvement/CPP)
+## [CPP](/Learning/Language-Improvement/CPP)
 
-## [Python](/Language-Improvement/Python)
+## [Python](/Learning/Language-Improvement/Python)
 
-## [Rust](/Language-Improvement/Rust)
+## [Rust](/Learning/Language-Improvement/Rust)
 
-## [Typescript](/Language-Improvement/Typescript)
+## [Typescript](/Learning/Language-Improvement/Typescript)

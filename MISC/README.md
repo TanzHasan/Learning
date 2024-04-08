@@ -4,4 +4,4 @@ Random Stuff
 
 # History
 
-[Internships](/MISC/Internships)
+[Internships](/Learning/MISC/Internships)
