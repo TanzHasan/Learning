@@ -2,45 +2,44 @@
 
 If you are reading this, you have probably asked me how to get one, or someone sent this to you.
 
-# Table of Contents
-- [Internships](#internships)
-  - [Getting the Interview](#getting-the-interview)
-    - [How do you get your Application viewed?](#how-do-you-get-your-application-viewed)
-    - [How do you prevent your application from being tossed out?](#how-do-you-prevent-your-application-from-being-tossed-out)
-    - [How do I format my resume?](#how-do-i-format-my-resume)
-    - [How do I get more resume content?](#how-do-i-get-more-resume-content)
-    - [Skipping the line](#skipping-the-line)
-  - [Passing the Interview](#passing-the-interview)
-    - [Behavioral](#behavioral)
-    - [Leetcode Interviews](#leetcode-interviews)
-        - [How do you study?](#how-do-you-study)
-    - [Write A Lot of Code Interviews](#write-a-lot-of-code-interviews)
-    - [Design Interviews](#design-interviews)
-    - [Language Specific Interviews](#language-specific-interviews)
-    - [Systems Interviews](#systems-interviews)
-    - [Machine Learning Interviews](#machine-learning-interviews)
-  - [Closing](#closing)
-
 There are two components to finding an internship:
 
 1. Getting the Interview
 2. Passing the Interview
 
+# Table of Contents
+- [Getting the Interview](#getting-the-interview)
+  - [How do you get your application viewed?](#how-do-you-get-your-application-viewed)
+  - [How do you prevent your application from being tossed out?](#how-do-you-prevent-your-application-from-being-tossed-out)
+  - [How do I format my resume?](#how-do-i-format-my-resume)
+  - [How do I get more resume content?](#how-do-i-get-more-resume-content)
+  - [Skipping the line](#skipping-the-line)
+- [Passing the Interview](#passing-the-interview)
+  - [Behavioral Interviews](#behavioral-interviews)
+  - [Leetcode Interviews](#leetcode-interviews)
+      - [How do you study?](#how-do-you-study)
+  - [Write A Lot of Code Interviews](#write-a-lot-of-code-interviews)
+  - [Design Interviews](#design-interviews)
+  - [Language Specific Interviews](#language-specific-interviews)
+  - [Systems Interviews](#systems-interviews)
+  - [Machine Learning Interviews](#machine-learning-interviews)
+- [Closing](#closing)
+
 ## Getting the Interview
 
-### How do you get your Application viewed?
+### How do you get your application viewed?
 
 The first thing is to get your resume at the top of the stack as fast as possible.
 This means finding and applying to a role as fast as possible. How do you do this?
 
-Well, there is the [simplify](https://github.com/SimplifyJobs/Summer2024-Internships) list of jobs. That's easy to use, and if you check several times a day, you might find some applications as soon as they're posted. You could also try to find jobs as soon as they're posted. I will not tell you how to do this. You are a CS major; you should be able to figure this out.
+Well, there is the [simplify](https://github.com/SimplifyJobs/Summer2024-Internships) list of jobs. That's easy to use and if you check several times a day, you might find some applications as soon as they're posted. You could also try to find jobs as soon as they're posted. I will not tell you how to do this. You are a CS major; you should be able to figure this out.
 
 ### How do you prevent your application from being tossed out?
 
 The second thing, once you get your resume viewed, is to not get your resume tossed out. How do you do that?
 
-The actual resume template doesn't matter nearly as much as the content. You can use [Jake's resume template](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) and modify the LaTeX or make a Google doc.
-That's easy to use
+The actual resume template doesn't matter nearly as much as the content. You can use [Jake's resume template](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) and modify the LaTeX or make a Google doc. That's easy to use.
+
 ### How do I format my resume?
 
 Now, how do you format the resume? It depends on the type of company you are applying for and who's looking at your resume.
@@ -60,7 +59,7 @@ If you have no experience, you might find it useful to do any of the following:
 1. Go to hackathons (no one will bully you, don't worry)
 2. Do CS-related research
 3. Make a nontrivial project (no YT video tutorials)
-4. Try your hand at open-source commits. This is quite daunting, and you might find it easy to get into if you have used a particular open-source technology or if you join either Google Summer of Code or the Major League Hacking Fellowship.
+4. Try your hand at open-source commits. This is quite daunting, and you might find it easy to get into if you have used a particular open-source technology or if you join either [Google Summer of Code](https://summerofcode.withgoogle.com) or the [Major League Hacking Fellowship](https://fellowship.mlh.io/).
 5. Excel in CS-related competitions. CTFs, programming competitions, etc. If you have done math competitions that will also help you significantly.
 6. Unpaid internships. I hesitate to recommend this one, but if you can't do any of the above, providing free labor to a startup is a good way to get a foot in the door. That being said, make sure you're either learning or having fun. You don't want to be doing these unless necessary.
 7. Get lucky. Self explanatory.
@@ -81,7 +80,7 @@ Another way is finding someone at a company with sway who can get you directly i
 
 Interviews come in many flavors. I will be discussing vanilla, chocolate, strawberry, matcha, and a few others I have personally experienced. It's important to note that for technical interviews you should explain what you are doing. It is possible to solve the question and not move on or fail and move forward.
 
-### Behavioral
+### Behavioral Interviews
 
 The best advice is to talk to more people in real life. There is also the [STAR](https://www.vawizard.org/wiz-pdf/STAR_Method_Interviews.pdf) method for answering certain behavioral questions.
 
@@ -101,23 +100,24 @@ Once you finish that list, you should primarily do mediums and hard problems (I 
 
 You should also do contests because they force you to sit for hours and bash your head against a problem until it breaks. These problems are also new, so it is one of the best technical mock interviews, and you can either do old problems virtually (the inferior method) or do the competitions live on Saturdays and Sundays.
 
-Optionally, you could also try your hand at Codeforces or USACO. These are significantly harder, and, in my opinion, more rewarding. They are also extremely overkill and less immediately useful. I would advise you to do Leetcode first.
+Optionally, you could also try your hand at [Codeforces](https://fellowship.mlh.io/) or [USACO](https://usaco.org/). These are significantly harder, and, in my opinion, more rewarding than Leetcode. They are also extremely overkill and less immediately useful. I would advise you to do Leetcode first.
 
-Once you can reliably solve hards, you won't fail most leetcode interviews. For context, I have failed to solve problems in only two pure algorithmic interviews (I passed the first interview, and failed the second) for the entire hiring season of 2024. 
+Once you can reliably solve hards, you won't fail most leetcode interviews. For context, I have failed to solve problems in only two pure algorithmic interviews (I passed the first interview and failed the second) for the entire hiring season of 2024. 
 
 I find that most people who cannot solve easy leetcode questions or give up too quickly on them also tend to be bad programmers.
 Realistically, you should be able to take a good crack at Two Sum even if you can't solve it optimally.
 
 ### Write A Lot of Code Interviews
 
-This type of interview often gives you multiple problem statements that build on each other and want you to write clean code. If you write  unmaintainable code, you will not be able to move from statement 1, to statement 2. Completion and Quality matter more than algorithmic ability here.
+This type of interview often gives you multiple problem statements that build on each other and want you to write clean code. If you write unmaintainable code, you will not be able to move from statement 1 to statement 2. *Completion* and *Quality* matter more than algorithmic ability here.
 
 An example is this:
+
 1) Implement a text editor where you can write to the end and remove from the end.
 2) Now make it so you can move your cursor to the middle.
-3) Add a find mechanism.
-4) Add a replace all mechanism.
-5) Make it so you can replace only the first X.
+3) Add a *find* mechanism.
+4) Add a *replace all* mechanism.
+5) Make it so you can replace only the first X instances found.
 6) ...
 
 You could also be asked a single open-ended problem statement. For example, "Write Tetris." These aren't all that hard. You just need to break them into manageable pieces.
@@ -134,7 +134,7 @@ Low-level system design generally boils down to object-oriented programming.
 For example, "make a package manager and code out these specific functionalities."
 Usually, the code doesn't have to run. If it does, the problem is either small in scale or some code is already given to you.
 High-level system design interviews will usually be talking and whiteboarding.
-You're given a broad topic, and it's your job to break it down into specific functionalities.
+You're given a broad topic and it's your job to break it down into specific functionalities.
 Your job is essentially to transform "Make Uber, Tinder, etc" into "Store data this way, Design X functionality this way, etc."
 These are pretty easy because the bar is in the basement.
 Just keep calm and break the problem down. You'll be fine.
@@ -153,7 +153,7 @@ These interviews are uncommon and can generally only be passed by a familiarity 
 
 ### Systems Interviews
 
-This is my umbrella term for low-level programming interviews. Networking, Operating Systems, and occasionally computer architecture will fall under this category.
+This is my umbrella term for low-level programming interviews. *Networking*, *operating systems*, and occasionally *computer architecture* will fall under this category.
 
 I will not claim to be an expert on these types of interviews. You will also not be asked these often, if at all.
 
@@ -169,4 +169,4 @@ There are also trivia deep dives to assess that you know how everything works.
 
 ## Closing
 
-You can also find good advice on the CS Majors and CSCD discords. Just be consistent with whatever you do, and you will most likely be fine.
+You can also find good advice on the [CS Majors](https://discord.com/invite/csmajors) and [CSCD](https://discord.com/invite/cscareers) discords. Just be consistent with whatever you do, and you will most likely be fine.
