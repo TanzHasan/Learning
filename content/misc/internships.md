@@ -14,6 +14,10 @@ I will be discussing both in enough detail to get you started on your journey.
 
 ## Getting the Interview
 
+## When is hiring season?
+
+For most people, hiring season will start in August and end in March. You're not likely to get interviews before or after that, though it is certainly a possibility. If you are looking for a Summer 2025 internship, start preparing prior to August 2024. There are also off-cycle internships with different hiring seasons but I won't be discussing those.
+
 ### How do you get your application viewed?
 
 The first thing is to get your resume at the top of the stack as fast as possible.
