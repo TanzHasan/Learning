@@ -1,0 +1,48 @@
+# The URL the site will be built for
+base_url = "https://tanzhasan.github.io/Learning"
+title = "Tanz"
+
+# settings
+default_language = "en"
+build_search_index = false
+generate_feed = true
+feed_filename = "rss.xml"
+compile_sass = true
+
+# taxonomies = [
+#     { name = "tags", feed = true, paginate_by = 10 },
+# ]
+
+# theme
+theme = "apollo"
+
+[markdown]
+highlight_code = true
+highlight_theme = "ayu-dark"
+
+[extra]
+toc = true
+use_cdn = false
+theme = "toggle"
+mathjax = true
+mathjax_dollar_inline_enable = true
+# favicon = "/icon/favicon.png"
+
+menu = [
+    { name = "/Algos", url = "/algos", weight = 0 },
+    { name = "/Langs", url = "/langs", weight = 2 },
+    { name = "/Misc", url = "/misc", weight = 1 },
+    { name = "/about", url = "/about", weight = 4 },
+]
+
+socials = [
+    { name = "github", url = "https://github.com/TanzHasan", icon = "github" },
+    { name = "linkedin", url = "https://www.linkedin.com/in/tanzir-m-hasan/", icon = "linkedin" },
+    { name = "rss", url = "/rss.xml", icon = "rss" },
+
+]
+
+custom_css = []
+
+[extra.analytics]
+enabled = false
