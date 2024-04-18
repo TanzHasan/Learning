@@ -3,7 +3,7 @@ title = "Internships"
 date = "2024-04-09"
 +++
 
-If you are reading this, you have probably asked me how to get one, or someone sent this to you.
+If you are reading this, you have probably asked how to get one, or someone sent this to you.
 
 There are two components to finding an internship:
 
@@ -124,6 +124,7 @@ Usually, this comes in two flavors. Low-level and high-level.
 Low-level system design generally boils down to object-oriented programming.
 For example, "make a package manager and code out these specific functionalities."
 Usually, the code doesn't have to run. If it does, the problem is either small in scale or some code is already given to you.
+
 High-level system design interviews will usually be talking and whiteboarding.
 You're given a broad topic and it's your job to break it down into specific functionalities.
 Your job is essentially to transform "Make Uber, Tinder, etc" into "Store data this way, Design X functionality this way, etc."
