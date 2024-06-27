@@ -1,7 +1,10 @@
 +++
-title = "Intro to Bayesian Statistics"
-transparent = false
+title = "Simple Bayesian Statistics"
+date = "2024-03-28"
+weight = 1
 +++
+
+These are from old course notes
 
 ## Counting Example
 Let's consider a bag with 4 balls. The probability of reaching in and grabbing a ball that is blue is p. I want to get the sequence Blue White Blue, sampling with replacement. How many ways are there to do this? With the below fractions its easy to count out the possibilities.

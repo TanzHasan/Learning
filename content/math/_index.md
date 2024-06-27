@@ -1,6 +1,6 @@
 +++
 path = "math/"
 title = "Math"
-transparent = true
+transparent = false
 weight = 5
 +++

@@ -29,7 +29,6 @@ mathjax_dollar_inline_enable = true
 # favicon = "/icon/favicon.png"
 
 menu = [
-    { name = "/Algos", url = "/algos", weight = 0 },
     { name = "/Langs", url = "/langs", weight = 2 },
     { name = "/Misc", url = "/misc", weight = 1 },
     { name = "/about", url = "/about", weight = 4 },

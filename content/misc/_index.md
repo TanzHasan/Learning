@@ -1,7 +1,7 @@
 +++
 path = "misc/"
 title = "MISC"
-transparent = false
+transparent = true
 sort_by = "date"
 weight = 3
 +++
