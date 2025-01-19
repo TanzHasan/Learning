@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html class="dark light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         Beginner OOP
+        
+    </title>
+
+        
+            <meta property="og:title" content="Beginner OOP" />
+        
+     
+
+     
+         
+     
+
+     
+         
+    
+
+    
+    
+
+    
+    
+        <link href=https://tanzhasan.github.io/Learning/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="Tanz" href="https://tanzhasan.github.io/Learning/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=https://tanzhasan.github.io/Learning/theme/light.css />
+        <link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://tanzhasan.github.io/Learning/theme/dark.css" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://tanzhasan.github.io/Learning/main.css />
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;tanzhasan.github.io&#x2F;Learning>Tanz</a>
+
+        <div class="socials">
+            
+            <a rel="me" href="https:&#x2F;&#x2F;github.com&#x2F;TanzHasan" class="social">
+                <img alt=github src=https://tanzhasan.github.io/Learning/social_icons/github.svg>
+            </a>
+            
+            <a rel="me" href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;tanzh&#x2F;" class="social">
+                <img alt=linkedin src=https://tanzhasan.github.io/Learning/social_icons/linkedin.svg>
+            </a>
+            
+            <a rel="me" href="https:&#x2F;&#x2F;rss.app&#x2F;feeds&#x2F;VmYCYbR38PvGQeNb.xml" class="social">
+                <img alt=rss src=https://tanzhasan.github.io/Learning/social_icons/rss.svg>
+            </a>
+            
+        </div>
+    </div>
+
+    <nav>
+        
+        <a href=https://tanzhasan.github.io/Learning/langs style="margin-left: 0.7em">&#x2F;Langs</a>
+        
+        <a href=https://tanzhasan.github.io/Learning/misc style="margin-left: 0.7em">&#x2F;Misc</a>
+        
+        <a href=https://tanzhasan.github.io/Learning/about style="margin-left: 0.7em">&#x2F;about</a>
+        
+
+        
+        <a id="dark-mode-toggle" onclick="toggleTheme(); event.preventDefault();" href="#">
+            <img src=https://tanzhasan.github.io/Learning/feather/sun.svg id="sun-icon" style="filter: invert(1);" alt="Light" />
+            <img src=https://tanzhasan.github.io/Learning/feather/moon.svg id="moon-icon" alt="Dark" />
+        </a>
+        <script src=https://tanzhasan.github.io/Learning/js/themetoggle.js></script>
+        
+    </nav>
+</header>
+
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        Beginner OOP<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2024-03-11</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+            
+                <h1>Table of Contents</h1>
+                <ul>
+                
+                    <li>
+                        <a href="https://tanzhasan.github.io/Learning/langs/cpp/beginneroop/#refreshing-oop-knowledge">Refreshing OOP Knowledge</a>
+                        
+                    </li>
+                
+                </ul>
+            
+        
+
+        <section class="body">
+            <h1 id="refreshing-oop-knowledge">Refreshing OOP Knowledge</h1>
+<p>Lots of people have opinions on OOP. I'm not experienced enough to have a good take on the matter. My goal is to change that, of course. I, too, want to declare that OOP is an anti-pattern.</p>
+<p>Below is a super basic class.</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">SuperBasic </span><span>{}</span><span style="color:#bfbab0cc;">;
+</span></code></pre>
+<p>It doesn't actually do anything, so I'll make a less basic class.</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">#include </span><span style="color:#c2d94c;">&lt;iostream&gt;
+</span><span>
+</span><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Basic </span><span>{
+</span><span>
+</span><span style="color:#ff7733;">private</span><span>:
+</span><span>    </span><span style="color:#ff7733;">int</span><span> a</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ff7733;">int</span><span> b</span><span style="color:#bfbab0cc;">;
+</span><span style="color:#ff7733;">public</span><span>:
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">//constructor
+</span><span>
+</span><span>    </span><span style="color:#ffb454;">Basic</span><span>(</span><span style="color:#ff7733;">int </span><span style="color:#f29718;">a</span><span style="color:#bfbab0cc;">, </span><span style="color:#ff7733;">int </span><span style="color:#f29718;">b</span><span>) </span><span style="color:#bfbab0cc;">: </span><span>a(a)</span><span style="color:#bfbab0cc;">, </span><span>b(b) {
+</span><span>        std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt; </span><span style="color:#c2d94c;">&quot;Creating&quot; </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">//copy constructor
+</span><span>    </span><span style="color:#ffb454;">Basic</span><span>(</span><span style="color:#ff7733;">const</span><span> Basic</span><span style="color:#f29668;">&amp; </span><span style="color:#f29718;">other</span><span>)</span><span style="color:#bfbab0cc;">: </span><span>a(other</span><span style="color:#f29668;">.</span><span>a)</span><span style="color:#bfbab0cc;">, </span><span>b(other</span><span style="color:#f29668;">.</span><span>b){
+</span><span>        std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt; </span><span style="color:#c2d94c;">&quot;Copying&quot; </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">//assignment operator
+</span><span>    Basic</span><span style="color:#f29668;">&amp; </span><span style="color:#ffb454;">operator=</span><span>(</span><span style="color:#ff7733;">const</span><span> Basic</span><span style="color:#f29668;">&amp; </span><span style="color:#f29718;">other</span><span>){
+</span><span>        </span><span style="color:#ff7733;">if </span><span>(</span><span style="font-style:italic;color:#39bae6;">this </span><span style="color:#f29668;">== &amp;</span><span>other) </span><span style="color:#ff7733;">return </span><span style="color:#f29668;">*</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#bfbab0cc;">;
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">-&gt;</span><span>a </span><span style="color:#f29668;">=</span><span> other</span><span style="color:#f29668;">.</span><span>a</span><span style="color:#bfbab0cc;">;
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">-&gt;</span><span>b </span><span style="color:#f29668;">=</span><span> other</span><span style="color:#f29668;">.</span><span>b</span><span style="color:#bfbab0cc;">;
+</span><span>        std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt; </span><span style="color:#c2d94c;">&quot;assigning&quot; </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>        </span><span style="color:#ff7733;">return </span><span style="color:#f29668;">*</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">//destructor
+</span><span>    </span><span style="color:#ffb454;">~Basic</span><span>() {
+</span><span>        std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt; </span><span style="color:#c2d94c;">&quot;Deleting&quot; </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>    </span><span style="color:#ff7733;">int </span><span style="color:#ffb454;">doSomething</span><span>(){
+</span><span>        </span><span style="color:#ff7733;">return</span><span> a </span><span style="color:#f29668;">+</span><span> b</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">int </span><span style="color:#ffb454;">main</span><span>(){
+</span><span>    Basic a </span><span style="color:#f29668;">= </span><span style="color:#ffb454;">Basic</span><span>(</span><span style="color:#f29718;">1</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29718;">2</span><span>)</span><span style="color:#bfbab0cc;">;
+</span><span>    Basic b </span><span style="color:#f29668;">= </span><span style="color:#ffb454;">Basic</span><span>(a)</span><span style="color:#bfbab0cc;">;
+</span><span>    Basic c </span><span style="color:#f29668;">= </span><span style="color:#ffb454;">Basic</span><span>(</span><span style="color:#f29718;">3</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29718;">2</span><span>)</span><span style="color:#bfbab0cc;">;
+</span><span>    b </span><span style="color:#f29668;">=</span><span> c</span><span style="color:#bfbab0cc;">;
+</span><span>    std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt;</span><span> b</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">doSomething</span><span>() </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span></code></pre>
+<p>This shows how to create 4 basic functions (constructor, copy, assignment, destructor), and running it will show how each of them of them are used. The destructor will be particularly important for preventing memory leaks, but that's not important for now. In addition, there is a public method we can use to do something with the class.</p>
+<p>Let's say I want an object that inherits from this Basic class. The way to do that would be the following:</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Advanced </span><span style="color:#bfbab0cc;">: </span><span style="color:#ff7733;">public </span><span style="text-decoration:underline;color:#59c2ff;">Basic </span><span>{
+</span><span style="color:#ff7733;">public</span><span>:
+</span><span>    </span><span style="color:#ffb454;">Advanced</span><span>(</span><span style="color:#ff7733;">int </span><span style="color:#f29718;">a</span><span style="color:#bfbab0cc;">, </span><span style="color:#ff7733;">int </span><span style="color:#f29718;">b</span><span>) </span><span style="color:#bfbab0cc;">: </span><span>Basic(a</span><span style="color:#bfbab0cc;">,</span><span>b){}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">int </span><span style="color:#ffb454;">doSomething</span><span>(){
+</span><span>        </span><span style="color:#ff7733;">return</span><span> a </span><span style="color:#f29668;">*</span><span> b</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#ffb454;">~Advanced</span><span>(){
+</span><span>        std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt; </span><span style="color:#c2d94c;">&quot;Deleting Advanced&quot; </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span></code></pre>
+<p>This doesn't work because I declared items in Basic private. Let's fix that:</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Basic </span><span>{
+</span><span style="color:#ff7733;">protected</span><span>:
+</span><span>    </span><span style="color:#ff7733;">int</span><span> a</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ff7733;">int</span><span> b</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#f29668;">...
+</span></code></pre>
+<p>Protected means it can be accessed by classes that inherit it. Now when I try the below we I expect to get 2:</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">int </span><span style="color:#ffb454;">main</span><span>(){
+</span><span>    Basic</span><span style="color:#f29668;">*</span><span> a </span><span style="color:#f29668;">= </span><span style="color:#ff7733;">new </span><span style="color:#ffb454;">Advanced</span><span>(</span><span style="color:#f29718;">1</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29718;">2</span><span>)</span><span style="color:#bfbab0cc;">;
+</span><span>    std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt;</span><span> a</span><span style="color:#f29668;">-&gt;</span><span style="color:#ffb454;">doSomething</span><span>() </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ff7733;">delete</span><span> a</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span></code></pre>
+<p>I get 3. This is because I didn't override. To do that, I have to set the function I'm overriding to be virtual in the base class and add override to the derived class. I also don't see deleting advanced, so I have to set the Basic destructor to be virtual, too, which will make it so the pointer calls the derived destructor first. The reasoning behind adding virtual will be covered later when I discuss vtables and vptrs.</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Basic</span><span>{
+</span><span>    </span><span style="color:#f29668;">...
+</span><span>    </span><span style="color:#ff7733;">virtual </span><span style="color:#ffb454;">~Basic</span><span>() {
+</span><span>        std</span><span style="color:#f29668;">::</span><span>cerr </span><span style="color:#f29668;">&lt;&lt; </span><span style="color:#c2d94c;">&quot;Deleting&quot; </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>    </span><span style="color:#ff7733;">virtual int </span><span style="color:#ffb454;">doSomething</span><span>(){
+</span><span>        </span><span style="color:#ff7733;">return</span><span> a </span><span style="color:#f29668;">+</span><span> b</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Advanced </span><span style="color:#bfbab0cc;">: </span><span style="color:#ff7733;">public </span><span style="text-decoration:underline;color:#59c2ff;">Basic </span><span>{
+</span><span style="color:#ff7733;">public</span><span>:
+</span><span>    </span><span style="color:#ffb454;">Advanced</span><span>(</span><span style="color:#ff7733;">int </span><span style="color:#f29718;">a</span><span style="color:#bfbab0cc;">, </span><span style="color:#ff7733;">int </span><span style="color:#f29718;">b</span><span>) </span><span style="color:#bfbab0cc;">: </span><span>Basic(a</span><span style="color:#bfbab0cc;">,</span><span>b){}</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ff7733;">int </span><span style="color:#ffb454;">doSomething</span><span>() </span><span style="color:#ff7733;">override </span><span>{
+</span><span>        </span><span style="color:#ff7733;">return</span><span> a </span><span style="color:#f29668;">*</span><span> b</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>    </span><span style="color:#f29668;">...
+</span></code></pre>
+<p>Now everything works as intended. So far, this is has been a very cursory overview of how classes work and some basic inheritance. I'm now going to use this for a bigger example to show how this would be used in practice. Traditionally this is taught with Animals eating or making noises. I'm going to gamble.</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">#include </span><span style="color:#c2d94c;">&lt;vector&gt;
+</span><span style="color:#ff7733;">#include </span><span style="color:#c2d94c;">&lt;algorithm&gt;
+</span><span style="color:#ff7733;">#include </span><span style="color:#c2d94c;">&lt;random&gt;
+</span><span style="color:#ff7733;">#include </span><span style="color:#c2d94c;">&lt;iostream&gt;
+</span><span>
+</span><span>
+</span><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Card </span><span>{
+</span><span style="color:#ff7733;">public</span><span>:
+</span><span>    std</span><span style="color:#f29668;">::</span><span>string suit</span><span style="color:#bfbab0cc;">;
+</span><span>    std</span><span style="color:#f29668;">::</span><span>string rank</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>    </span><span style="color:#ffb454;">Card</span><span>(std</span><span style="color:#f29668;">::</span><span>string </span><span style="color:#f29718;">suit</span><span style="color:#bfbab0cc;">,</span><span> std</span><span style="color:#f29668;">::</span><span>string </span><span style="color:#f29718;">rank</span><span>) </span><span style="color:#bfbab0cc;">: </span><span>suit(suit)</span><span style="color:#bfbab0cc;">, </span><span>rank(rank) {}
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span></code></pre>
+<p>First I'm going to include the necessary headers and then make a basic card class.</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">#include </span><span style="color:#c2d94c;">&lt;vector&gt;
+</span><span style="color:#ff7733;">#include </span><span style="color:#c2d94c;">&lt;algorithm&gt;
+</span><span style="color:#ff7733;">#include </span><span style="color:#c2d94c;">&lt;random&gt;
+</span><span style="color:#ff7733;">#include </span><span style="color:#c2d94c;">&lt;iostream&gt;
+</span><span>
+</span><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Card </span><span>{
+</span><span style="color:#ff7733;">public</span><span>:
+</span><span>    </span><span style="color:#ff7733;">enum </span><span style="color:#59c2ff;">Suit </span><span>{ H</span><span style="color:#bfbab0cc;">,</span><span> D</span><span style="color:#bfbab0cc;">,</span><span> C</span><span style="color:#bfbab0cc;">,</span><span> S }</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ff7733;">enum </span><span style="color:#59c2ff;">Rank </span><span>{ Two</span><span style="color:#bfbab0cc;">,</span><span> Three</span><span style="color:#bfbab0cc;">,</span><span> Four</span><span style="color:#bfbab0cc;">,</span><span> Five</span><span style="color:#bfbab0cc;">,</span><span> Six</span><span style="color:#bfbab0cc;">,</span><span> Seven</span><span style="color:#bfbab0cc;">,</span><span> Eight</span><span style="color:#bfbab0cc;">,</span><span> Nine</span><span style="color:#bfbab0cc;">,</span><span> Ten</span><span style="color:#bfbab0cc;">,</span><span> J</span><span style="color:#bfbab0cc;">,</span><span> Q</span><span style="color:#bfbab0cc;">,</span><span> K</span><span style="color:#bfbab0cc;">,</span><span> A }</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>    </span><span style="color:#ffb454;">Card</span><span>(Suit </span><span style="color:#f29718;">suit</span><span style="color:#bfbab0cc;">,</span><span> Rank </span><span style="color:#f29718;">rank</span><span>) </span><span style="color:#bfbab0cc;">: </span><span>suit(suit)</span><span style="color:#bfbab0cc;">, </span><span>rank(rank) {}
+</span><span>
+</span><span>    Suit </span><span style="color:#ffb454;">getSuit</span><span>() </span><span style="color:#ff7733;">const </span><span>{ </span><span style="color:#ff7733;">return</span><span> suit</span><span style="color:#bfbab0cc;">; </span><span>}
+</span><span>    Rank </span><span style="color:#ffb454;">getRank</span><span>() </span><span style="color:#ff7733;">const </span><span>{ </span><span style="color:#ff7733;">return</span><span> rank</span><span style="color:#bfbab0cc;">; </span><span>}
+</span><span>    </span><span style="color:#ff7733;">friend</span><span> std</span><span style="color:#f29668;">::</span><span>ostream</span><span style="color:#f29668;">&amp; </span><span style="color:#ff7733;">operator</span><span style="color:#f29668;">&lt;&lt;</span><span>(std</span><span style="color:#f29668;">::</span><span>ostream</span><span style="color:#f29668;">&amp;</span><span> os</span><span style="color:#bfbab0cc;">, </span><span style="color:#ff7733;">const</span><span> Card</span><span style="color:#f29668;">&amp;</span><span> card)</span><span style="color:#bfbab0cc;">;
+</span><span style="color:#ff7733;">private</span><span>:
+</span><span>    Suit suit</span><span style="color:#bfbab0cc;">;
+</span><span>    Rank rank</span><span style="color:#bfbab0cc;">;
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>std</span><span style="color:#f29668;">::</span><span>ostream</span><span style="color:#f29668;">&amp; </span><span style="color:#ffb454;">operator&lt;&lt;</span><span>(std</span><span style="color:#f29668;">::</span><span>ostream</span><span style="color:#f29668;">&amp; </span><span style="color:#f29718;">os</span><span style="color:#bfbab0cc;">, </span><span style="color:#ff7733;">const</span><span> Card</span><span style="color:#f29668;">&amp; </span><span style="color:#f29718;">card</span><span>) {
+</span><span>    </span><span style="color:#ff7733;">const char</span><span style="color:#f29668;">*</span><span> suitNames[] </span><span style="color:#f29668;">= </span><span>{</span><span style="color:#c2d94c;">&quot;Hearts&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;Diamonds&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;Clubs&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;Spades&quot;</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ff7733;">const char</span><span style="color:#f29668;">*</span><span> rankNames[] </span><span style="color:#f29668;">= </span><span>{</span><span style="color:#c2d94c;">&quot;2&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;3&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;4&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;5&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;6&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;7&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;8&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;9&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;10&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;Jack&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;Queen&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;King&quot;</span><span style="color:#bfbab0cc;">, </span><span style="color:#c2d94c;">&quot;Ace&quot;</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">return</span><span> os </span><span style="color:#f29668;">&lt;&lt;</span><span> rankNames[</span><span style="color:#ff7733;">static_cast</span><span>&lt;</span><span style="color:#ff7733;">int</span><span>&gt;(card</span><span style="color:#f29668;">.</span><span>rank)] </span><span style="color:#f29668;">&lt;&lt; </span><span style="color:#c2d94c;">&quot; of &quot; </span><span style="color:#f29668;">&lt;&lt;</span><span> suitNames[</span><span style="color:#ff7733;">static_cast</span><span>&lt;</span><span style="color:#ff7733;">int</span><span>&gt;(card</span><span style="color:#f29668;">.</span><span>suit)]</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span></code></pre>
+<p>The enums here can be strings, it doesn't really matter for the purpose of this demonstration. The friend operator allows us to access private and protected members of a class from certain methods. In this case we can now std::cout a card.</p>
+<p>Using these cards I'll make a deck that I can shuffle, insert into, and deal from. Note that since I am using pointers to Card objects that are allocated on the heap with new, I need to clean them up with my destructor otherwise there will be a memory leak.</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Deck </span><span>{
+</span><span style="color:#ff7733;">public</span><span>:
+</span><span>    </span><span style="color:#ffb454;">Deck</span><span>() {
+</span><span>        </span><span style="color:#ff7733;">for </span><span>(</span><span style="color:#ff7733;">int</span><span> suit </span><span style="color:#f29668;">= </span><span style="color:#f29718;">0</span><span style="color:#bfbab0cc;">;</span><span> suit </span><span style="color:#f29668;">&lt; </span><span style="color:#f29718;">4</span><span style="color:#bfbab0cc;">; </span><span style="color:#f29668;">++</span><span>suit) {
+</span><span>            </span><span style="color:#ff7733;">for </span><span>(</span><span style="color:#ff7733;">int</span><span> rank </span><span style="color:#f29668;">= </span><span style="color:#f29718;">0</span><span style="color:#bfbab0cc;">;</span><span> rank </span><span style="color:#f29668;">&lt; </span><span style="color:#f29718;">13</span><span style="color:#bfbab0cc;">; </span><span style="color:#f29668;">++</span><span>rank) {
+</span><span>                cards</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">emplace_back</span><span>(</span><span style="color:#ff7733;">new </span><span style="color:#ffb454;">Card</span><span>(Card</span><span style="color:#f29668;">::</span><span style="color:#ffb454;">Suit</span><span>(suit)</span><span style="color:#bfbab0cc;">, </span><span>Card</span><span style="color:#f29668;">::</span><span style="color:#ffb454;">Rank</span><span>(rank)))</span><span style="color:#bfbab0cc;">;
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">void </span><span style="color:#ffb454;">shuffle</span><span>() {
+</span><span>        std</span><span style="color:#f29668;">::</span><span style="color:#ffb454;">shuffle</span><span>(cards</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">begin</span><span>()</span><span style="color:#bfbab0cc;">,</span><span> cards</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">end</span><span>()</span><span style="color:#bfbab0cc;">, </span><span>std</span><span style="color:#f29668;">::</span><span style="color:#ffb454;">default_random_engine </span><span>{})</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>
+</span><span>    Card</span><span style="color:#f29668;">* </span><span style="color:#ffb454;">dealCard</span><span>() {
+</span><span>        </span><span style="color:#ff7733;">if </span><span>(cards</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">empty</span><span>()) {
+</span><span>            </span><span style="color:#ff7733;">throw </span><span>std</span><span style="color:#f29668;">::</span><span style="color:#ffb454;">out_of_range</span><span>(</span><span style="color:#c2d94c;">&quot;Out of cards buddy...&quot;</span><span>)</span><span style="color:#bfbab0cc;">;
+</span><span>        }
+</span><span>        Card</span><span style="color:#f29668;">*</span><span> dealtCard </span><span style="color:#f29668;">=</span><span> cards</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">back</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>        cards</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">pop_back</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>        </span><span style="color:#ff7733;">return</span><span> dealtCard</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">void </span><span style="color:#ffb454;">insertCard</span><span>(Card</span><span style="color:#f29668;">* </span><span style="color:#f29718;">newCard</span><span>){
+</span><span>        cards</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">push_back</span><span>(newCard)</span><span style="color:#bfbab0cc;">;
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">-&gt;</span><span style="color:#ffb454;">shuffle</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>    </span><span style="color:#ffb454;">~Deck</span><span>(){
+</span><span>        </span><span style="color:#ff7733;">for</span><span>(Card</span><span style="color:#f29668;">*</span><span> card</span><span style="color:#f29668;">:</span><span> cards){
+</span><span>            </span><span style="color:#ff7733;">delete</span><span> card</span><span style="color:#bfbab0cc;">;
+</span><span>        }
+</span><span>    }
+</span><span>    </span><span style="color:#ff7733;">friend</span><span> std</span><span style="color:#f29668;">::</span><span>ostream</span><span style="color:#f29668;">&amp; </span><span style="color:#ff7733;">operator</span><span style="color:#f29668;">&lt;&lt;</span><span>(std</span><span style="color:#f29668;">::</span><span>ostream</span><span style="color:#f29668;">&amp;</span><span> os</span><span style="color:#bfbab0cc;">, </span><span style="color:#ff7733;">const</span><span> Deck</span><span style="color:#f29668;">&amp;</span><span> deck)</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">private</span><span>:
+</span><span>    std</span><span style="color:#f29668;">::</span><span>vector&lt;Card</span><span style="color:#f29668;">*</span><span>&gt; cards</span><span style="color:#bfbab0cc;">;
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>std</span><span style="color:#f29668;">::</span><span>ostream</span><span style="color:#f29668;">&amp; </span><span style="color:#ffb454;">operator&lt;&lt;</span><span>(std</span><span style="color:#f29668;">::</span><span>ostream</span><span style="color:#f29668;">&amp; </span><span style="color:#f29718;">os</span><span style="color:#bfbab0cc;">, </span><span style="color:#ff7733;">const</span><span> Deck</span><span style="color:#f29668;">&amp; </span><span style="color:#f29718;">deck</span><span>) {
+</span><span>    </span><span style="color:#ff7733;">for </span><span>(</span><span style="color:#ff7733;">const</span><span> Card</span><span style="color:#f29668;">*</span><span> card </span><span style="color:#f29668;">:</span><span> deck</span><span style="color:#f29668;">.</span><span>cards) {
+</span><span>        os </span><span style="color:#f29668;">&lt;&lt; *</span><span>card </span><span style="color:#f29668;">&lt;&lt; </span><span style="color:#c2d94c;">&#39;</span><span style="color:#95e6cb;">\n</span><span style="color:#c2d94c;">&#39;</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>    </span><span style="color:#ff7733;">return</span><span> os</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span></code></pre>
+<p>Up till now I've just been using what I've covered. Now we're going to make a Game class. There are many types of card games that all have sort of similar rules. For that reason this Game class will be an abstract class. It will have a purely virtual play method because different games can be played in different ways.</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Game </span><span>{
+</span><span style="color:#ff7733;">public</span><span>:
+</span><span>    </span><span style="color:#ffb454;">Game</span><span>() </span><span style="color:#bfbab0cc;">: </span><span>deck(</span><span style="color:#f29718;">nullptr</span><span>) {}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">virtual </span><span style="color:#ffb454;">~Game</span><span>() { </span><span style="color:#ff7733;">delete</span><span> deck</span><span style="color:#bfbab0cc;">; </span><span>}
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">virtual void </span><span style="color:#ffb454;">play</span><span>() </span><span style="color:#f29668;">= </span><span style="color:#f29718;">0</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">void </span><span style="color:#ffb454;">chooseDeck </span><span>(Deck</span><span style="color:#f29668;">* </span><span style="color:#f29718;">deck</span><span>){
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">-&gt;</span><span>deck </span><span style="color:#f29668;">=</span><span> deck</span><span style="color:#bfbab0cc;">;
+</span><span>        deck</span><span style="color:#f29668;">-&gt;</span><span style="color:#ffb454;">shuffle</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>
+</span><span style="color:#ff7733;">protected</span><span>:
+</span><span>    Deck</span><span style="color:#f29668;">*</span><span> deck</span><span style="color:#bfbab0cc;">;
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span></code></pre>
+<p>No matter the card game we'll probably want some or all of these methods. This is an abstract class and can't be instantiated. The reason for this is the line <code>virtual void play() = 0;</code> which creates the purely virtual function play. Since there is no default way to play a game, we can't create this class directly; we must inherit and override. I'm going to inherit these methods with 2 different types of games, Blackjack and Poker.</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Poker </span><span style="color:#bfbab0cc;">: </span><span style="color:#ff7733;">public </span><span style="text-decoration:underline;color:#59c2ff;">Game </span><span>{
+</span><span style="color:#ff7733;">public</span><span>:
+</span><span>    </span><span style="color:#ffb454;">Poker</span><span>() </span><span style="color:#bfbab0cc;">: </span><span>Game() {}
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">void </span><span style="color:#ffb454;">play</span><span>() </span><span style="color:#ff7733;">override </span><span>{
+</span><span>        </span><span style="color:#ff7733;">if </span><span>(</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">-&gt;</span><span>deck </span><span style="color:#f29668;">== </span><span style="color:#f29718;">nullptr</span><span>) </span><span style="color:#ff7733;">throw </span><span>std</span><span style="color:#f29668;">::</span><span style="color:#ffb454;">out_of_range</span><span>(</span><span style="color:#c2d94c;">&quot;No Deck...&quot;</span><span>)</span><span style="color:#bfbab0cc;">;
+</span><span>        std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt; </span><span style="color:#c2d94c;">&quot;Playing Poker...&quot; </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">BlackJack </span><span style="color:#bfbab0cc;">: </span><span style="color:#ff7733;">public </span><span style="text-decoration:underline;color:#59c2ff;">Game </span><span>{
+</span><span style="color:#ff7733;">public</span><span>:
+</span><span>    </span><span style="color:#ffb454;">BlackJack</span><span>() </span><span style="color:#bfbab0cc;">: </span><span>Game() {}
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">void </span><span style="color:#ffb454;">play</span><span>() </span><span style="color:#ff7733;">override </span><span>{
+</span><span>        </span><span style="color:#ff7733;">if </span><span>(</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">-&gt;</span><span>deck </span><span style="color:#f29668;">== </span><span style="color:#f29718;">nullptr</span><span>) </span><span style="color:#ff7733;">throw </span><span>std</span><span style="color:#f29668;">::</span><span style="color:#ffb454;">out_of_range</span><span>(</span><span style="color:#c2d94c;">&quot;No Deck...&quot;</span><span>)</span><span style="color:#bfbab0cc;">;
+</span><span>        std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt; </span><span style="color:#c2d94c;">&quot;Playing BlackJack...&quot; </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span></code></pre>
+<p>These classes can use all the methods of the abstract class and override the purely virtual play method. Overriding play is a classic example of polymorphism, allowing objects of different classes to be treated as objects of a base class while still executing their own versions of the method. Polymorphism is very useful, especially when setting up something like the Casino class, which will take all types of Game objects.</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Casino </span><span>{
+</span><span style="color:#ff7733;">public</span><span>:
+</span><span>    </span><span style="color:#ffb454;">Casino</span><span>(){
+</span><span>        </span><span style="color:#ff7733;">for </span><span>(</span><span style="color:#ff7733;">int</span><span> i </span><span style="color:#f29668;">= </span><span style="color:#f29718;">0</span><span style="color:#bfbab0cc;">;</span><span> i </span><span style="color:#f29668;">&lt; </span><span style="color:#f29718;">100</span><span style="color:#bfbab0cc;">; </span><span style="color:#f29668;">++</span><span>i) {
+</span><span>            decks</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">emplace_back</span><span>(</span><span style="color:#ff7733;">new</span><span> Deck)</span><span style="color:#bfbab0cc;">;
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">void </span><span style="color:#ffb454;">startgame</span><span>(Game</span><span style="color:#f29668;">&amp; </span><span style="color:#f29718;">game</span><span>){
+</span><span>        game</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">chooseDeck</span><span>(decks</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">back</span><span>())</span><span style="color:#bfbab0cc;">;
+</span><span>        decks</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">pop_back</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>    }</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">virtual </span><span style="color:#ffb454;">~Casino</span><span>() {
+</span><span>        </span><span style="color:#ff7733;">for </span><span>(Deck</span><span style="color:#f29668;">*</span><span> deck</span><span style="color:#f29668;">:</span><span> decks) {
+</span><span>            </span><span style="color:#ff7733;">delete</span><span> deck</span><span style="color:#bfbab0cc;">;
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span style="color:#ff7733;">private</span><span>:
+</span><span>    std</span><span style="color:#f29668;">::</span><span>vector&lt;Deck</span><span style="color:#f29668;">*</span><span>&gt; decks</span><span style="color:#bfbab0cc;">;
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">int </span><span style="color:#ffb454;">main</span><span>() {
+</span><span>    Casino vegas</span><span style="color:#bfbab0cc;">;
+</span><span>    Poker losing</span><span style="color:#bfbab0cc;">;
+</span><span>    BlackJack money</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">// losing.play(); //will throw errors
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">// money.play();
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">// Game emptygame; //Abstract class cannot be instantiated
+</span><span>    vegas</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">startgame</span><span>(losing)</span><span style="color:#bfbab0cc;">;
+</span><span>    vegas</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">startgame</span><span>(money)</span><span style="color:#bfbab0cc;">;
+</span><span>    losing</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">play</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>    money</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">play</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ff7733;">return </span><span style="color:#f29718;">0</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span></code></pre>
+<p>That covers the basic principles of OOP in C++. We could add more depth to the BlackJack and Poker classes, but that won't add anything OOP-wise. There are a few other topics to cover (vtables, vptrs, etc) which will be discussed in another Markdown file. Below are some of the terms used in this file and a little more depth about them:</p>
+<p><strong>Protected</strong>: Data members of a class that are labeled protected can be accessed by inherited classes and friends.</p>
+<p><strong>Virtual</strong>: Normally, C++ matches a function call with its definition at compile time. This is called static binding. Specifying virtual ensures that this is done in runtime instead. This is called dynamic binding. This is why doSomething printed 2 instead of 3 when we added the virtual keyword because it got dynamically linked Advanced::doSomething instead of Basic::doSomething even though it appeared to be a Basic pointer.</p>
+<p><strong>Purely Virtual</strong>: The presence of these functions make a class abstract. Inherited classes must override this method if they want to be instantiated.</p>
+<p><strong>Abstract Classes</strong>: These are classes that are designed specifically to be base classes and represent concepts (Game, Animal, Shape). They have one or more purely virtual functions. In our case, there is no way to play a Game. There are, however, ways to play Poker, Blackjack, and any other inherited classes.</p>
+<p><strong>Polymorphism</strong>: The examples shown were example of runtime polymorphism using method overriding. There are other forms of polymorphism but they aren't OOP related. These are function overloading and method overloading which can be seen below.</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="font-style:italic;color:#5c6773;">//function overloading
+</span><span style="color:#ff7733;">void </span><span style="color:#ffb454;">func</span><span>(</span><span style="color:#ff7733;">int </span><span style="color:#f29718;">a</span><span>){
+</span><span>    std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt;</span><span> a </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">void </span><span style="color:#ffb454;">func</span><span>(</span><span style="color:#ff7733;">int </span><span style="color:#f29718;">a</span><span style="color:#bfbab0cc;">, </span><span style="color:#ff7733;">int </span><span style="color:#f29718;">b</span><span>){ </span><span style="font-style:italic;color:#5c6773;">//same name different parameters
+</span><span>    std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt;</span><span> a </span><span style="color:#f29668;">+</span><span> b </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">int </span><span style="color:#ffb454;">main</span><span>() {
+</span><span>    </span><span style="color:#ffb454;">func</span><span>(</span><span style="color:#f29718;">1</span><span>)</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ffb454;">func</span><span>(</span><span style="color:#f29718;">1</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29718;">2</span><span>)</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span></code></pre>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="font-style:italic;color:#5c6773;">//method overloading
+</span><span style="color:#ff7733;">struct </span><span style="color:#59c2ff;">dummy</span><span>{
+</span><span>    </span><span style="color:#ff7733;">void </span><span style="color:#ffb454;">func</span><span>(</span><span style="color:#ff7733;">int </span><span style="color:#f29718;">a</span><span>){
+</span><span>        std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt;</span><span> a </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#ff7733;">void </span><span style="color:#ffb454;">func</span><span>(</span><span style="color:#ff7733;">int </span><span style="color:#f29718;">a</span><span style="color:#bfbab0cc;">, </span><span style="color:#ff7733;">int </span><span style="color:#f29718;">b</span><span>){
+</span><span>        std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt;</span><span> a </span><span style="color:#f29668;">+</span><span> b </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">int </span><span style="color:#ffb454;">main</span><span>() {
+</span><span>    dummy a</span><span style="color:#bfbab0cc;">;
+</span><span>    a</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">func</span><span>(</span><span style="color:#f29718;">1</span><span>)</span><span style="color:#bfbab0cc;">;
+</span><span>    a</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">func</span><span>(</span><span style="color:#f29718;">1</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29718;">2</span><span>)</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span></code></pre>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>
