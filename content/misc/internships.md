@@ -23,13 +23,13 @@ For most people, hiring season will start in August and end in March. You're not
 The first thing is to get your resume at the top of the stack as fast as possible.
 This means finding and applying to a role as fast as possible. How do you do this?
 
-Well, there is the [simplify](https://github.com/SimplifyJobs/Summer2024-Internships) list of jobs. That's easy to use and if you check several times a day, you might find some applications as soon as they're posted. You could also try to find jobs as soon as they're posted. I will not tell you how to do this. You are a CS major; you should be able to figure this out.
+Well, there is the [simplify](https://github.com/SimplifyJobs/Summer2024-Internships) list of jobs. It's easy to use and if you check several times a day, you might find some applications as soon as they're added to the list. You could also try to find jobs as soon as they're posted. I will not tell you how to do this. You are a CS major; you should be able to figure this out.
 
 ### How do you prevent your application from being tossed out?
 
 The second thing, once you get your resume viewed, is to not get your resume tossed out. How do you do that?
 
-The actual resume template doesn't matter nearly as much as the content. You can use [Jake's resume template](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) and modify the LaTeX or make a Google doc. That's easy to use.
+The actual resume template doesn't matter nearly as much as the content. You can use [Jake's resume template](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) and modify the LaTeX or make a Google doc.
 
 ### How do I format my resume?
 

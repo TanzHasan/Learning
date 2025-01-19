@@ -1,5 +1,4 @@
 +++
-path = "algos/"
 title = "Algorithm Improvement"
 weight = 1
 transparent = true
