@@ -5,9 +5,6 @@ title = "Tanz"
 # settings
 default_language = "en"
 build_search_index = false
-generate_feed = true
-feed_filename = "rss.xml"
-compile_sass = true
 
 # taxonomies = [
 #     { name = "tags", feed = true, paginate_by = 10 },
@@ -36,8 +33,8 @@ menu = [
 
 socials = [
     { name = "github", url = "https://github.com/TanzHasan", icon = "github" },
-    { name = "linkedin", url = "https://www.linkedin.com/in/tanzir-m-hasan/", icon = "linkedin" },
-    { name = "rss", url = "/rss.xml", icon = "rss" },
+    { name = "linkedin", url = "https://www.linkedin.com/in/tanzh/", icon = "linkedin" },
+    { name = "rss", url = "https://rss.app/feeds/VmYCYbR38PvGQeNb.xml", icon = "rss" },
 
 ]
 
