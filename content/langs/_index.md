@@ -5,3 +5,4 @@ transparent = true
 +++
 
 [CPP](/Learning/langs/cpp)
+[Typescript](/Learning/langs/typescript)

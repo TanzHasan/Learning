@@ -47,10 +47,10 @@ I would also like to remind you that if your end goal is to become a software en
 
 If you have no experience, you might find it useful to do any of the following:
 
-1. Go to hackathons (no one will bully you, don't worry)
-2. Do CS-related research
-3. Make a nontrivial project (no YT video tutorials)
-4. Try your hand at open-source commits. This is quite daunting, and you might find it easy to get into if you have used a particular open-source technology or if you join either [Google Summer of Code](https://summerofcode.withgoogle.com) or the [Major League Hacking Fellowship](https://fellowship.mlh.io/).
+1. Join Programs like [Google Summer of Code](https://summerofcode.withgoogle.com) or the [Major League Hacking Fellowship](https://fellowship.mlh.io/). 
+2. Go to hackathons (no one will bully you, don't worry)
+3. Do CS-related research
+4. Make a nontrivial project (no YT video tutorials) 
 5. Excel in CS-related competitions. CTFs, programming competitions, etc. If you have done math competitions that will also help you significantly.
 6. Unpaid internships. I hesitate to recommend this one, but if you can't do any of the above, providing free labor to a startup is a good way to get a foot in the door. That being said, make sure you're either learning or having fun. You don't want to be doing these unless necessary.
 7. Get lucky. Self explanatory.
