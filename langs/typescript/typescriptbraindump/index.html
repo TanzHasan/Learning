@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html class="dark light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         Typescript Braindump
+        
+    </title>
+
+        
+            <meta property="og:title" content="Typescript Braindump" />
+        
+     
+
+     
+         
+     
+
+     
+         
+    
+
+    
+    
+
+    
+    
+        <link href=https://tanzhasan.github.io/Learning/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="Tanz" href="https://tanzhasan.github.io/Learning/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=https://tanzhasan.github.io/Learning/theme/light.css />
+        <link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://tanzhasan.github.io/Learning/theme/dark.css" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://tanzhasan.github.io/Learning/main.css />
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;tanzhasan.github.io&#x2F;Learning>Tanz</a>
+
+        <div class="socials">
+            
+            <a rel="me" href="https:&#x2F;&#x2F;github.com&#x2F;TanzHasan" class="social">
+                <img alt=github src=https://tanzhasan.github.io/Learning/social_icons/github.svg>
+            </a>
+            
+            <a rel="me" href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;tanzh&#x2F;" class="social">
+                <img alt=linkedin src=https://tanzhasan.github.io/Learning/social_icons/linkedin.svg>
+            </a>
+            
+            <a rel="me" href="https:&#x2F;&#x2F;rss.app&#x2F;feeds&#x2F;VmYCYbR38PvGQeNb.xml" class="social">
+                <img alt=rss src=https://tanzhasan.github.io/Learning/social_icons/rss.svg>
+            </a>
+            
+        </div>
+    </div>
+
+    <nav>
+        
+        <a href=https://tanzhasan.github.io/Learning/langs style="margin-left: 0.7em">&#x2F;Langs</a>
+        
+        <a href=https://tanzhasan.github.io/Learning/misc style="margin-left: 0.7em">&#x2F;Misc</a>
+        
+        <a href=https://tanzhasan.github.io/Learning/about style="margin-left: 0.7em">&#x2F;about</a>
+        
+
+        
+        <a id="dark-mode-toggle" onclick="toggleTheme(); event.preventDefault();" href="#">
+            <img src=https://tanzhasan.github.io/Learning/feather/sun.svg id="sun-icon" style="filter: invert(1);" alt="Light" />
+            <img src=https://tanzhasan.github.io/Learning/feather/moon.svg id="moon-icon" alt="Dark" />
+        </a>
+        <script src=https://tanzhasan.github.io/Learning/js/themetoggle.js></script>
+        
+    </nav>
+</header>
+
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        Typescript Braindump<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2025-11-03</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+            
+                <h1>Table of Contents</h1>
+                <ul>
+                
+                    <li>
+                        <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#typescript-braindump">Typescript Braindump</a>
+                        
+                            <ul>
+                                
+                                    <li>
+                                        <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#variables">Variables</a>
+                                    </li>
+
+                                    
+                                    <ul>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#declaring-variables">Declaring Variables</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#block-scopes">Block Scopes</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#closures">Closures</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#enums">Enums</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                
+                                    <li>
+                                        <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#functions">Functions</a>
+                                    </li>
+
+                                    
+                                    <ul>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#hoisting">Hoisting</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#this-for-functions">This for functions</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#anonymity">Anonymity</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                
+                                    <li>
+                                        <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#this">This</a>
+                                    </li>
+
+                                    
+                                    <ul>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#new">New</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#passing-this-between-objects-skippable">Passing This Between Objects (Skippable)</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                
+                                    <li>
+                                        <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#types-and-interfaces">Types and Interfaces</a>
+                                    </li>
+
+                                    
+                                    <ul>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#types-vs-interfaces">Types vs Interfaces</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#casting">Casting</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#the-miracles-of-the-type-system">The Miracles of the Type System</a>
+                                            </li>
+                                        
+                                    </ul>
+                                    
+                                
+                                    <li>
+                                        <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#end">End</a>
+                                    </li>
+
+                                    
+                                
+                            </ul>
+                        
+                    </li>
+                
+                </ul>
+            
+        
+
+        <section class="body">
+            <h1 id="typescript-braindump">Typescript Braindump</h1>
+<p>I've learned a decent bit about the language in my year and a half of using it and I've decided to synthesize a document with a lot of the more useful parts of the language. Lots of what I have learned are opinions and stylistic recommendations because at the end of the day, Typescript will do nothing to stop you if you really want to shoot yourself in the foot.</p>
+<h2 id="variables">Variables</h2>
+<h3 id="declaring-variables">Declaring Variables</h3>
+<p>Typescript allows you to declare variables using <code>const</code>, <code>let</code>, and <code>var</code>. Only one of these is correct :^)</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">const </span><span>suffering </span><span style="color:#f29668;">= </span><span style="color:#f29718;">0</span><span style="color:#bfbab0cc;">;
+</span></code></pre>
+<p>Generally, you do not need mutable variables so const is the most common way of declaring a variable. Const is the same as with most other languages. Declaring something as const will prevent you from changing it's memory address but everything else is fair game.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">const </span><span>arrayThatIsConst </span><span style="color:#f29668;">= </span><span>[]
+</span><span>arrayThatIsConst</span><span style="color:#f29668;">.</span><span style="color:#f07178;">push</span><span>(</span><span style="color:#c2d94c;">&#39;hi&#39;</span><span>) </span><span style="font-style:italic;color:#5c6773;">// valid
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>objectThatIsConst </span><span style="color:#f29668;">= </span><span>{thing</span><span style="color:#bfbab0cc;">: </span><span style="color:#c2d94c;">&#39;hi&#39;</span><span>}
+</span><span>objectThatIsConst</span><span style="color:#f29668;">.</span><span>thing </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;hello&#39; </span><span style="font-style:italic;color:#5c6773;">// valid
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>objectThatIsStillConst </span><span style="color:#f29668;">= </span><span>{}</span><span style="color:#bfbab0cc;">;
+</span><span>(objectThatIsStillConst </span><span style="color:#ff7733;">as </span><span style="font-style:italic;color:#39bae6;">any</span><span>)</span><span style="color:#f29668;">.</span><span>thing </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;hello&#39; </span><span style="font-style:italic;color:#5c6773;">// valid unfortunately
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>objectThatIsNotConst </span><span style="color:#f29668;">= </span><span>{thing</span><span style="color:#bfbab0cc;">: </span><span style="color:#c2d94c;">&#39;hi&#39;</span><span>}
+</span><span>objectThatIsNotConst </span><span style="color:#f29668;">= </span><span>{thing</span><span style="color:#bfbab0cc;">: </span><span style="color:#c2d94c;">&#39;otherthing&#39;</span><span>} </span><span style="font-style:italic;color:#5c6773;">// invalid
+</span></code></pre>
+<p>If you need to use a mutable value you <em>allegedly</em> should always use <code>let</code>. To my understanding the main difference between <code>let</code> and <code>var</code> is that <code>let</code> respects block-scopes (whenever you see this <code>{}</code>) and closures and <code>var</code> only respects closures. If you declare a variable with <code>let</code> in and out of a for loop, they are different variables. The same is not true for <code>var</code>.</p>
+<p>Put more simply, this is the output when <code>var</code> is used:</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">var </span><span>a </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;a&#39;
+</span><span>
+</span><span style="color:#ff7733;">for </span><span>(</span><span style="color:#ff7733;">const </span><span>i </span><span style="color:#f29668;">of </span><span style="font-style:italic;color:#39bae6;">Array</span><span>(</span><span style="color:#f29718;">5</span><span>)</span><span style="color:#f29668;">.</span><span style="color:#f07178;">values</span><span>()){
+</span><span>    </span><span style="color:#ff7733;">var </span><span>a </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;hmmm&#39;
+</span><span>    </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(i)
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(a) </span><span style="font-style:italic;color:#5c6773;">// hmmm
+</span></code></pre>
+<p>vs <code>let</code></p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">let </span><span>a </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;a&#39;
+</span><span>
+</span><span style="color:#ff7733;">for </span><span>(</span><span style="color:#ff7733;">const </span><span>i </span><span style="color:#f29668;">of </span><span style="font-style:italic;color:#39bae6;">Array</span><span>(</span><span style="color:#f29718;">5</span><span>)</span><span style="color:#f29668;">.</span><span style="color:#f07178;">values</span><span>()){
+</span><span>    </span><span style="color:#ff7733;">let </span><span>a </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;hmmm&#39;
+</span><span>    </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(i)
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(a) </span><span style="font-style:italic;color:#5c6773;">// a
+</span></code></pre>
+<p>Perhaps there are situations in which <code>var</code> is applicable, but I have not run into any. It is generally agreed online that it should be shelved in favor of <code>let</code>.</p>
+<h3 id="block-scopes">Block Scopes</h3>
+<p>A block scope is what it sounds like.
+Variables and functions declared within a block (everything that uses <code>{}</code> that is not an object declares a block-scope) are only accessible within that block.
+In the below example, innerFn does not exist outside of the functionFactory and cannot be directly accessed unless it is returned at which point a copy of innerFn is assigned to a variable in the new scope.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">function </span><span style="color:#ffb454;">functionFactory</span><span>() {
+</span><span>    </span><span style="color:#ff7733;">function </span><span style="color:#ffb454;">innerFn</span><span>(){
+</span><span>        </span><span style="color:#ff7733;">const </span><span>item </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;hello&#39;
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(item)
+</span><span>    }
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">// console.log(item) // invalid
+</span><span>    </span><span style="color:#ff7733;">return </span><span>innerFn
+</span><span>}
+</span><span style="font-style:italic;color:#5c6773;">// innerFn() // invalid
+</span><span style="color:#ff7733;">const </span><span>newFn </span><span style="color:#f29668;">= </span><span style="color:#ffb454;">functionFactory</span><span>()
+</span><span style="color:#ffb454;">newFn</span><span>() </span><span style="font-style:italic;color:#5c6773;">// hello
+</span></code></pre>
+<p>Inner scopes have access to the contents of their parent scopes, the opposite is not true.
+Scopes are pretty simple overall, they work just like most other languages.
+If you use <code>var</code> we enter the world of <a href="https://www.freecodecamp.org/news/scope-in-javascript-global-vs-local-vs-block-scope">function scopes and global scopes</a>, but the solution to that is to just not use <code>var</code>.</p>
+<h3 id="closures">Closures</h3>
+<p>To quote the MDN docs: "<em>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the <strong>lexical environment</strong>)</em>". Given what we have just learned about scopes, the lexical environment can be thought of as outer scopes.</p>
+<p>In the following example, we see that the variable <code>outerVar</code> can still be accessed despite the outer function seemingly no longer existing. This is because the inner function is bundled with the relevant outer scope.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">const </span><span style="color:#ffb454;">outerFunction </span><span style="color:#f29668;">= </span><span>() </span><span style="color:#ff7733;">=&gt; </span><span>{
+</span><span>    </span><span style="color:#ff7733;">const </span><span>outerVar </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;hello&#39;</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ff7733;">const </span><span style="color:#ffb454;">innerFunction </span><span style="color:#f29668;">= </span><span>() </span><span style="color:#ff7733;">=&gt; </span><span>{
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(outerVar)
+</span><span>    }
+</span><span>    </span><span style="color:#ff7733;">return </span><span>innerFunction
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>createdFunction </span><span style="color:#f29668;">= </span><span style="color:#ffb454;">outerFunction</span><span>()
+</span><span style="color:#ffb454;">createdFunction</span><span>() </span><span style="font-style:italic;color:#5c6773;">// hello
+</span></code></pre>
+<p>In the below example, we can see a different closure being generated for each of the created functions. Every time we call <code>count</code> we bundle a newly created block-scope with newly created variables with the function.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">const </span><span style="color:#ffb454;">count </span><span style="color:#f29668;">= </span><span>() </span><span style="color:#ff7733;">=&gt; </span><span>{
+</span><span>    </span><span style="color:#ff7733;">let </span><span>increment </span><span style="color:#f29668;">= </span><span style="color:#f29718;">0</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ff7733;">const </span><span style="color:#ffb454;">incrementFn </span><span style="color:#f29668;">= </span><span>() </span><span style="color:#ff7733;">=&gt; </span><span>{
+</span><span>        increment </span><span style="color:#f29668;">+= </span><span style="color:#f29718;">1</span><span style="color:#bfbab0cc;">;
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(increment)
+</span><span>    }
+</span><span>    </span><span style="color:#ff7733;">return </span><span>incrementFn
+</span><span>}
+</span><span style="color:#ff7733;">let </span><span>count1 </span><span style="color:#f29668;">= </span><span style="color:#ffb454;">count</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span style="color:#ffb454;">count1</span><span>()</span><span style="color:#bfbab0cc;">; </span><span style="font-style:italic;color:#5c6773;">// 1
+</span><span style="color:#ffb454;">count1</span><span>()</span><span style="color:#bfbab0cc;">; </span><span style="font-style:italic;color:#5c6773;">// 2
+</span><span>
+</span><span style="color:#ff7733;">let </span><span>count2 </span><span style="color:#f29668;">= </span><span style="color:#ffb454;">count</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span style="color:#ffb454;">count2</span><span>() </span><span style="font-style:italic;color:#5c6773;">// 1
+</span></code></pre>
+<h3 id="enums">Enums</h3>
+<p>After writing this whole doc, I realized I never talked about enums anywhere and I think they're pretty cool and should be used everywhere. They generally improve code quality because they allow you to essentially a list of related constants and that improves readibility and type safety.</p>
+<p>By default enums map a variable to a number starting from 0.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">enum </span><span style="color:#59c2ff;">BasicEnum </span><span>{
+</span><span>    APPLE</span><span style="color:#bfbab0cc;">,
+</span><span>    BANANA</span><span style="color:#bfbab0cc;">,
+</span><span>    CARROT
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(BasicEnum</span><span style="color:#f29668;">.</span><span>APPLE) </span><span style="font-style:italic;color:#5c6773;">// 0
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(BasicEnum</span><span style="color:#f29668;">.</span><span>BANANA) </span><span style="font-style:italic;color:#5c6773;">// 1
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(BasicEnum</span><span style="color:#f29668;">.</span><span>CARROT) </span><span style="font-style:italic;color:#5c6773;">// 2
+</span></code></pre>
+<p>I personally think it's best to use strings instead of the default number. You can imagine a request going from the frontend to the backend where the enums are for some reason out of order resulting in a wrong response. They also just make request bodies easier to read.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">enum </span><span style="color:#59c2ff;">BasicEnum </span><span>{
+</span><span>    APPLE </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;APPLE&#39;</span><span style="color:#bfbab0cc;">,
+</span><span>    BANANA </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;BANANA&#39;</span><span style="color:#bfbab0cc;">,
+</span><span>    CARROT </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;CARROT&#39;
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(BasicEnum</span><span style="color:#f29668;">.</span><span>APPLE) </span><span style="font-style:italic;color:#5c6773;">// APPLE
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(BasicEnum</span><span style="color:#f29668;">.</span><span>BANANA) </span><span style="font-style:italic;color:#5c6773;">// BANANA
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(BasicEnum</span><span style="color:#f29668;">.</span><span>CARROT) </span><span style="font-style:italic;color:#5c6773;">// CARROT
+</span></code></pre>
+<p>I said earlier that enums increase readability and type safety, what does that mean? Well, for readability, it's cleaner than passing around some strings that can theoretically be anything. In the following example, if a string were used in place of an enum, theoretically the strings used to initialize the <code>Shop</code> class could be anything. Instead, we enforce uniformity. We also don't have to speculate about the type that fruit can be and instead just safely assume it's one of the three in the enum.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">enum </span><span style="color:#59c2ff;">BasicEnum </span><span>{
+</span><span>    APPLE </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;APPLE&#39;</span><span style="color:#bfbab0cc;">,
+</span><span>    BANANA </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;BANANA&#39;</span><span style="color:#bfbab0cc;">,
+</span><span>    CARROT </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;CARROT&#39;
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(BasicEnum</span><span style="color:#f29668;">.</span><span>APPLE) </span><span style="font-style:italic;color:#5c6773;">// APPLE
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(BasicEnum</span><span style="color:#f29668;">.</span><span>BANANA) </span><span style="font-style:italic;color:#5c6773;">// BANANA
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(BasicEnum</span><span style="color:#f29668;">.</span><span>CARROT) </span><span style="font-style:italic;color:#5c6773;">// CARROT
+</span><span>
+</span><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">Shop </span><span>{
+</span><span>    fruit</span><span style="color:#f29668;">: </span><span style="color:#59c2ff;">BasicEnum
+</span><span>    </span><span style="color:#ff7733;">constructor</span><span>(</span><span style="color:#f29718;">fruitType</span><span style="color:#f29668;">: </span><span style="color:#59c2ff;">BasicEnum</span><span>){
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>fruit </span><span style="color:#f29668;">= </span><span>fruitType
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>newShop </span><span style="color:#f29668;">= new </span><span style="color:#59c2ff;">Shop</span><span>(BasicEnum</span><span style="color:#f29668;">.</span><span>APPLE)
+</span><span style="color:#ff7733;">switch</span><span>(newShop</span><span style="color:#f29668;">.</span><span>fruit){
+</span><span>    </span><span style="color:#ff7733;">case </span><span>BasicEnum</span><span style="color:#f29668;">.</span><span>APPLE:
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="color:#c2d94c;">&#39;Apples for sale&#39;</span><span>)
+</span><span>}
+</span></code></pre>
+<p>With regards to type safety, enums allow us to infer the values and perform <a href="https://www.meticulous.ai/blog/safer-exhaustive-switch-statements-in-typescript">exhaustive switch statements</a> to update functions whenever the underlying enum changes. I strongly recommend using exhaustive switches to make sure you don't forget to change anything important when updating your enums.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="font-style:italic;color:#5c6773;">// throws an error because Banana and Carrot are missing
+</span><span style="font-style:italic;color:#5c6773;">// switch(newShop.fruit){
+</span><span style="font-style:italic;color:#5c6773;">//     case BasicEnum.APPLE:
+</span><span style="font-style:italic;color:#5c6773;">//         console.log(&#39;Apples for sale&#39;)
+</span><span style="font-style:italic;color:#5c6773;">// }
+</span><span>
+</span><span style="color:#ff7733;">switch</span><span>(newShop</span><span style="color:#f29668;">.</span><span>fruit){
+</span><span>    </span><span style="color:#ff7733;">case </span><span>BasicEnum</span><span style="color:#f29668;">.</span><span>APPLE:
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="color:#c2d94c;">&#39;Apples for sale&#39;</span><span>)
+</span><span>    </span><span style="color:#ff7733;">case </span><span>BasicEnum</span><span style="color:#f29668;">.</span><span>BANANA:
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="color:#c2d94c;">&#39;Bannanas for sale&#39;</span><span>)
+</span><span>    </span><span style="color:#ff7733;">case </span><span>BasicEnum</span><span style="color:#f29668;">.</span><span>CARROT:
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="color:#c2d94c;">&#39;Carrots for sale&#39;</span><span>)
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// if we add GRAPES to BasicEnum, the above would not compile until
+</span><span style="font-style:italic;color:#5c6773;">// it is updated with Grapes.
+</span></code></pre>
+<h2 id="functions">Functions</h2>
+<p>There are two types of functions in Typescript. There are your regular functions which are denoted via <code>function</code> and there are your arrow functions which are denoted via <code>=&gt;</code>.</p>
+<p>There are a couple of differences but generally they can be used interchangeably.</p>
+<h3 id="hoisting">Hoisting</h3>
+<p>Regular functionss are hoisted, but arrow functions are not. Hoisting essentially means they are pre-emptively declared so they can be used anywhere in the code. An example of hoisting can be seen in the following example.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ffb454;">hi</span><span>() </span><span style="font-style:italic;color:#5c6773;">// produces hello
+</span><span>
+</span><span style="color:#ff7733;">function </span><span style="color:#ffb454;">hi</span><span>() {
+</span><span>    </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="color:#c2d94c;">&#39;hello&#39;</span><span>)
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">/* This would not work because hi was called before it was defined
+</span><span style="font-style:italic;color:#5c6773;">hi()
+</span><span style="font-style:italic;color:#5c6773;">const hi () =&gt; {
+</span><span style="font-style:italic;color:#5c6773;">    console.log(&#39;hello)
+</span><span style="font-style:italic;color:#5c6773;">}
+</span><span style="font-style:italic;color:#5c6773;">*
+</span></code></pre>
+<h3 id="this-for-functions"><code>This</code> for functions</h3>
+<p>See below for an explanation on what <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#this">this</a> means</p>
+<p>Arrow functions and regular functions handle the use of <code>this</code> differently. Arrow functions use the same <code>this</code> as where they are defined whereas regular functions create their own <code>this</code>. We can see this in action in the below example where the regular function now has access to myName.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">const </span><span>objWithArrowFn </span><span style="color:#f29668;">= </span><span>{
+</span><span>    myName</span><span style="color:#bfbab0cc;">: </span><span style="color:#c2d94c;">&#39;Hello&#39;</span><span style="color:#bfbab0cc;">,
+</span><span>    </span><span style="color:#ffb454;">greet</span><span style="color:#bfbab0cc;">: </span><span>() </span><span style="color:#ff7733;">=&gt; </span><span>{
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>myName)</span><span style="color:#bfbab0cc;">; </span><span style="font-style:italic;color:#5c6773;">// type error, no this
+</span><span>    }
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>objWithRegularFn </span><span style="color:#f29668;">=  </span><span>{
+</span><span>    myName</span><span style="color:#bfbab0cc;">: </span><span style="color:#c2d94c;">&#39;Hello&#39;</span><span style="color:#bfbab0cc;">,
+</span><span>    </span><span style="color:#ffb454;">greet</span><span style="color:#bfbab0cc;">: </span><span style="color:#ff7733;">function </span><span>() {
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>myName)</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>obj</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">greet</span><span>()</span><span style="color:#bfbab0cc;">;
+</span></code></pre>
+<p>The second example strikes me as an anti-pattern since you may as well just define a class with just a little bit more boiler plate.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">classWithRegularFn  </span><span>{
+</span><span>    hello</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string
+</span><span>    </span><span style="color:#ff7733;">constructor</span><span>(){
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>hello </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;Hello&#39;
+</span><span>    }
+</span><span>    </span><span style="color:#ffb454;">greet</span><span>()</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">void </span><span>{ </span><span style="font-style:italic;color:#5c6773;">// greet can be an arrow function
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>hello)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>However knowing this distinction is useful because now if you try and have a constructor be an arrow function you'll find that it fails to do so. The constructor does not create it's own this which is important for the <a href="https://tanzhasan.github.io/Learning/langs/typescript/typescriptbraindump/#new"><code>new</code></a> keyword to function and as a result arrow functions seemingly are not recognized ways to initialize classes.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">classWithArrowFn  </span><span>{
+</span><span>    hello</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string </span><span style="font-style:italic;color:#5c6773;">//Property &#39;hello&#39; has no initializer and is not
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">// definitely assigned in the constructor
+</span><span>    </span><span style="color:#ff7733;">constructor</span><span> = () =&gt; {
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>hello </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;Hello&#39;
+</span><span>        </span><span style="color:#ff7733;">return </span><span style="font-style:italic;color:#39bae6;">this </span><span style="font-style:italic;color:#5c6773;">// The containing arrow function captures 
+</span><span>        </span><span style="font-style:italic;color:#5c6773;">// the global value of &#39;this&#39;
+</span><span>    }
+</span><span>    </span><span style="color:#ffb454;">greet</span><span>()</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">void </span><span>{
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>hello)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="anonymity">Anonymity</h3>
+<p>Arrow functions are always anonymous. Regular functions can also be anonymous but you do have a choice and usually people do not create anonymous functions with the <code>function</code> keyword.</p>
+<p>Anoymous functions may make it harder to debug. What do I mean by this? Consider a datadog flamegraph for an api that is particularly slow. 10 named functions are called in this api and 100 anonymous functions are called. The anonymous functions are most of the flamegraph. How do you figure out what is causing the slowness? You'd have to find the slowest named function and drill down from there, which isn't hard but is mildly more involved than if all the functions were named. In my experience it hasn't been an issue but if anonymous functions are everywhere then I can see it being one.</p>
+<p>Being anonymous, it's a bit harder to perform recursive operations since you can not easily call yourself but it's still possible to do.</p>
+<h2 id="this">This</h2>
+<p>The <code>this</code> or <code>self</code> keyword is used in a lot of different languages and it generally refers to the same idea. In Typescript it is a way of representing the current context. If there is no current context it refers to the global object and <code>this</code> = <code>globalThis</code>.</p>
+<p><code>this</code> is generally used within the context of objects like classes and is determined at runtime. It is used to access other methods or variables within the current context of the object. A trivial example below:</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">BasicClass </span><span>{
+</span><span>    variable</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string
+</span><span>    </span><span style="color:#ff7733;">constructor</span><span>(){
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>variable </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;You can assign variables via the constructor&#39;
+</span><span>    }
+</span><span>    </span><span style="color:#ffb454;">method</span><span>(){
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>variable)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="new"><code>New</code></h3>
+<p>When dealing with <code>this</code> you will often need to use the <code>new</code> keyword. <code>new</code> does a few things, it creates a new object, binds that object to the <code>this</code> context, then it executes the constructor.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">objWithArrowFn </span><span>{
+</span><span>    name </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;Hello&#39;
+</span><span>    </span><span style="color:#ffb454;">greet </span><span style="color:#f29668;">= </span><span>() </span><span style="color:#ff7733;">=&gt; </span><span>{
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>name)</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">objWithRegularFn </span><span>{
+</span><span>    </span><span style="color:#ff7733;">constructor</span><span>(){
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="color:#c2d94c;">&#39;getting constructed&#39;</span><span>)
+</span><span>    }
+</span><span>    name </span><span style="color:#f29668;">=</span><span style="color:#c2d94c;">&#39;Hello&#39;
+</span><span>    </span><span style="color:#ffb454;">greet </span><span>() {
+</span><span>        </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>name)</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>obj1 </span><span style="color:#f29668;">= new </span><span style="color:#59c2ff;">objWithArrowFn</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>obj1</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">greet</span><span>() </span><span style="font-style:italic;color:#5c6773;">// Hello
+</span><span style="color:#ff7733;">const </span><span>obj2 </span><span style="color:#f29668;">= new </span><span style="color:#59c2ff;">objWithRegularFn</span><span>()</span><span style="color:#bfbab0cc;">; </span><span style="font-style:italic;color:#5c6773;">// getting constructed
+</span><span>obj2</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">greet</span><span>() </span><span style="font-style:italic;color:#5c6773;">// Hello
+</span></code></pre>
+<p>While writing this to check if I missed anything I learned that you can actually return a different object from the constructor causing the returned object to be bound instead. This is interesting but strikes me as an anti-pattern.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">objWithArrowFn </span><span>{
+</span><span>    name </span><span style="color:#f29668;">= </span><span style="color:#c2d94c;">&#39;obj1&#39;
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">objWithRegularFn </span><span>{
+</span><span>    </span><span style="color:#ff7733;">constructor</span><span>(){
+</span><span>        </span><span style="color:#ff7733;">return </span><span style="color:#f29668;">new </span><span style="color:#59c2ff;">objWithArrowFn</span><span>()
+</span><span>    }
+</span><span>    name </span><span style="color:#f29668;">=</span><span style="color:#c2d94c;">&#39;obj2&#39;
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>obj1 </span><span style="color:#f29668;">= new </span><span style="color:#59c2ff;">objWithArrowFn</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span style="color:#ff7733;">const </span><span>obj2 </span><span style="color:#f29668;">= new </span><span style="color:#59c2ff;">objWithRegularFn</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(obj1</span><span style="color:#f29668;">.</span><span>name) </span><span style="font-style:italic;color:#5c6773;">// obj1
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(obj2</span><span style="color:#f29668;">.</span><span>name) </span><span style="font-style:italic;color:#5c6773;">// obj1
+</span></code></pre>
+<h3 id="passing-this-between-objects-skippable">Passing <code>This</code> Between Objects (Skippable)</h3>
+<p>An interesting thing that I found on the MDN docs is that <code>this</code> always refers to the current context meaning if you take a function that references this out of 1 object and put it into another, it references the context of the second function. This makes sense becasuse as stated before it is determined at runtime. This is shown in the below example. If the use of <code>as any</code> wasn't warning enough, <strong>DO NOT</strong> do this.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="font-style:italic;color:#5c6773;">// modified example from MDN
+</span><span style="color:#ff7733;">const </span><span>obj4 </span><span style="color:#f29668;">= </span><span>{
+</span><span>  name</span><span style="color:#bfbab0cc;">: </span><span style="color:#c2d94c;">&quot;obj4&quot;</span><span style="color:#bfbab0cc;">,
+</span><span>  </span><span style="color:#ffb454;">getThis</span><span>() {
+</span><span>    </span><span style="color:#ff7733;">return </span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#bfbab0cc;">;
+</span><span>  }</span><span style="color:#bfbab0cc;">,
+</span><span>  </span><span style="color:#ffb454;">log</span><span>(){
+</span><span>    </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(</span><span style="font-style:italic;color:#39bae6;">this</span><span style="color:#f29668;">.</span><span>name)
+</span><span>  }
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>obj5 </span><span style="color:#f29668;">= </span><span>{ name</span><span style="color:#bfbab0cc;">: </span><span style="color:#c2d94c;">&quot;obj5&quot; </span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span>(obj5 </span><span style="color:#ff7733;">as </span><span style="font-style:italic;color:#39bae6;">any</span><span>)</span><span style="color:#f29668;">.</span><span>getThis </span><span style="color:#f29668;">= </span><span>obj4</span><span style="color:#f29668;">.</span><span>getThis</span><span style="color:#bfbab0cc;">;
+</span><span>(obj5 </span><span style="color:#ff7733;">as </span><span style="font-style:italic;color:#39bae6;">any</span><span>)</span><span style="color:#f29668;">.</span><span>log </span><span style="color:#f29668;">= </span><span>obj4</span><span style="color:#f29668;">.</span><span>log</span><span style="color:#bfbab0cc;">;
+</span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>((obj5 </span><span style="color:#ff7733;">as </span><span style="font-style:italic;color:#39bae6;">any</span><span>)</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">getThis</span><span>())</span><span style="color:#bfbab0cc;">; </span><span style="font-style:italic;color:#5c6773;">// { name: &#39;obj5&#39;, getThis: [Function: getThis] }
+</span><span>(obj5 </span><span style="color:#ff7733;">as </span><span style="font-style:italic;color:#39bae6;">any</span><span>)</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">log</span><span>()</span><span style="color:#bfbab0cc;">; </span><span style="font-style:italic;color:#5c6773;">// obj5
+</span></code></pre>
+<h2 id="types-and-interfaces">Types and Interfaces</h2>
+<p>Types and interfaces are pretty cool and both share the main function of describing the shape of an object. I don't have much experience with some of the more abstract things that are possible, but I think I have a decent handle on the basics.</p>
+<h3 id="types-vs-interfaces">Types vs Interfaces</h3>
+<p>One of the bigger differences between types and interfaces is that interfaces can be declared multiple times and the definitions are merged, meanwhile types cannot be updated from their original declaration.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">interface </span><span style="color:#59c2ff;">ExampleInterface </span><span>{
+</span><span>    something</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">interface </span><span style="color:#59c2ff;">ExampleInterface </span><span>{
+</span><span>    someOtherThing</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">// something: null // is not allowed because it contradicts the previous interface
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>exampleObject</span><span style="color:#f29668;">: </span><span style="color:#59c2ff;">ExampleInterface </span><span style="color:#f29668;">= </span><span>{
+</span><span>    something</span><span style="color:#bfbab0cc;">: </span><span style="color:#c2d94c;">&#39;hi&#39;</span><span style="color:#bfbab0cc;">,
+</span><span>    someOtherThing</span><span style="color:#bfbab0cc;">: </span><span style="color:#c2d94c;">&#39;hello&#39;
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">type </span><span style="color:#59c2ff;">ExampleType </span><span style="color:#f29668;">= </span><span>{
+</span><span>    something</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// not allowed
+</span><span style="font-style:italic;color:#5c6773;">// type ExampleType = {
+</span><span style="font-style:italic;color:#5c6773;">//     someOtherThing: &#39;hello&#39;
+</span><span style="font-style:italic;color:#5c6773;">// }
+</span></code></pre>
+<p>There are some other differences which I found <a href="https://stackoverflow.com/questions/37233735/interfaces-vs-types-in-typescript/52682220#52682220">here</a> but quoting from the stack overflow comment: "A class can implement an interface or type alias, both in the same exact way. Note however that a class and interface are considered static blueprints. Therefore, they can not implement / extend a type alias that names a union type." Somehow, I've never ran into that issue before but that's a neat distinction.</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="font-style:italic;color:#5c6773;">// taken from the above
+</span><span style="color:#ff7733;">interface </span><span style="color:#59c2ff;">Point </span><span>{
+</span><span>  x</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">number</span><span style="color:#bfbab0cc;">;
+</span><span>  y</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">number</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">SomePoint </span><span style="color:#ff7733;">implements </span><span style="font-style:italic;color:#39bae6;">Point </span><span>{
+</span><span>  x </span><span style="color:#f29668;">= </span><span style="color:#f29718;">1</span><span style="color:#bfbab0cc;">;
+</span><span>  y </span><span style="color:#f29668;">= </span><span style="color:#f29718;">2</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">type </span><span style="color:#59c2ff;">Point2 </span><span style="color:#f29668;">= </span><span>{
+</span><span>  x</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">number</span><span style="color:#bfbab0cc;">;
+</span><span>  y</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">number</span><span style="color:#bfbab0cc;">;
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">SomePoint2 </span><span style="color:#ff7733;">implements </span><span style="text-decoration:underline;color:#59c2ff;">Point2 </span><span>{
+</span><span>  x </span><span style="color:#f29668;">= </span><span style="color:#f29718;">1</span><span style="color:#bfbab0cc;">;
+</span><span>  y </span><span style="color:#f29668;">= </span><span style="color:#f29718;">2</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">type </span><span style="color:#59c2ff;">PartialPoint </span><span style="color:#f29668;">= </span><span>{ x</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">number</span><span style="color:#bfbab0cc;">; </span><span>} </span><span style="color:#f29668;">| </span><span>{ y</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">number</span><span style="color:#bfbab0cc;">; </span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// FIXME: can not implement a union type
+</span><span style="color:#ff7733;">class </span><span style="color:#59c2ff;">SomePartialPoint </span><span style="color:#ff7733;">implements </span><span style="text-decoration:underline;color:#59c2ff;">PartialPoint </span><span>{
+</span><span>  x </span><span style="color:#f29668;">= </span><span style="color:#f29718;">1</span><span style="color:#bfbab0cc;">;
+</span><span>  y </span><span style="color:#f29668;">= </span><span style="color:#f29718;">2</span><span style="color:#bfbab0cc;">;
+</span><span>}
+</span></code></pre>
+<p>In addition to classes not being able to implement union types, when we try and extend a union type with an interface we get the error: "An interface can only extend an object type or intersection of object types with statically known members."</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">type </span><span style="color:#59c2ff;">AOrBType </span><span style="color:#f29668;">= </span><span>{ a</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string </span><span>} </span><span style="color:#f29668;">| </span><span>{ b</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string </span><span>}
+</span><span>
+</span><span style="color:#ff7733;">interface </span><span style="color:#59c2ff;">NewExampleInterface </span><span style="color:#ff7733;">extends </span><span style="text-decoration:underline;color:#59c2ff;">AOrBType </span><span>{
+</span><span>    thing</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string
+</span><span>}
+</span></code></pre>
+<h3 id="casting">Casting</h3>
+<p>Casting in typescript shouldn't happen very often. If you need to do it, what you can do is to use <code>as</code> to cast an object to appear something else. My personal preference for casting is to use <code>is</code> for ensuring type safety and transforming the type while doing so. Consider the following toy example:</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">type </span><span style="color:#59c2ff;">BasicType </span><span style="color:#f29668;">= </span><span>{
+</span><span>    optional</span><span style="color:#f29668;">?: </span><span style="font-style:italic;color:#39bae6;">string
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">function </span><span style="color:#ffb454;">hasOptional</span><span>(</span><span style="color:#f29718;">variable</span><span style="color:#f29668;">: </span><span style="color:#59c2ff;">BasicType</span><span>)</span><span style="color:#f29668;">: </span><span style="color:#f29718;">variable </span><span style="color:#f29668;">is </span><span style="color:#59c2ff;">BasicType </span><span style="color:#f29668;">&amp; </span><span>{ optional</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string </span><span>} {
+</span><span>    </span><span style="color:#ff7733;">return </span><span style="color:#c2d94c;">&#39;optional&#39; </span><span style="color:#f29668;">in </span><span>variable
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>a</span><span style="color:#f29668;">: </span><span style="color:#59c2ff;">BasicType </span><span style="color:#f29668;">= </span><span>{
+</span><span>    optional</span><span style="color:#bfbab0cc;">: </span><span style="color:#c2d94c;">&#39;hello&#39;
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">if </span><span>(</span><span style="color:#ffb454;">hasOptional</span><span>(a)){
+</span><span>    </span><span style="font-style:italic;color:#39bae6;">console</span><span style="color:#f29668;">.</span><span style="color:#f07178;">log</span><span>(a)
+</span><span>}
+</span></code></pre>
+<h3 id="the-miracles-of-the-type-system">The Miracles of the Type System</h3>
+<p>The type system can do a lot and is apparently Turing complete so the world is really your oyster here. The best guide on type manipulation is probably from the <a href="https://www.typescriptlang.org/docs/handbook/2/types-from-types.html">source</a>. I'll just give some toy examples on the nicer concepts that I've used.</p>
+<p>Recursion:</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">type </span><span style="color:#59c2ff;">NestedType </span><span style="color:#f29668;">= </span><span>(</span><span style="font-style:italic;color:#39bae6;">string </span><span style="color:#f29668;">| </span><span style="color:#59c2ff;">NestedType</span><span>)[]
+</span><span style="color:#ff7733;">const </span><span>a</span><span style="color:#f29668;">: </span><span style="color:#59c2ff;">NestedType </span><span style="color:#f29668;">= </span><span>[</span><span style="color:#c2d94c;">&#39;a&#39;</span><span>]
+</span><span style="color:#ff7733;">const </span><span>b</span><span style="color:#f29668;">: </span><span style="color:#59c2ff;">NestedType </span><span style="color:#f29668;">= </span><span>[[[[[[[[a]]]]]]]] </span><span style="font-style:italic;color:#5c6773;">// also valid
+</span></code></pre>
+<p>Conditionals:</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="color:#ff7733;">type </span><span style="color:#59c2ff;">NestedType </span><span style="color:#f29668;">= </span><span>(</span><span style="font-style:italic;color:#39bae6;">string </span><span style="color:#f29668;">| </span><span style="color:#59c2ff;">NestedType</span><span>)[]
+</span><span>
+</span><span style="color:#ff7733;">type </span><span style="color:#59c2ff;">IsArrayType</span><span>&lt;</span><span style="color:#59c2ff;">T</span><span>&gt; </span><span style="color:#f29668;">= </span><span style="color:#59c2ff;">T </span><span style="color:#ff7733;">extends </span><span style="color:#59c2ff;">Array</span><span>&lt;</span><span style="color:#f29668;">infer </span><span style="color:#59c2ff;">Type</span><span>&gt; </span><span style="color:#f29668;">? </span><span style="font-style:italic;color:#39bae6;">true </span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">false
+</span><span>
+</span><span style="color:#ff7733;">function </span><span style="color:#ffb454;">isArray</span><span>(</span><span style="color:#f29718;">item</span><span style="color:#f29668;">: </span><span style="color:#59c2ff;">NestedType</span><span>)</span><span style="color:#f29668;">: </span><span style="color:#59c2ff;">IsArrayType</span><span>&lt;</span><span style="color:#59c2ff;">NestedType</span><span>&gt;{
+</span><span>    </span><span style="color:#ff7733;">return </span><span style="color:#f29718;">true
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">// return false is not possible because NestedType is by definition an array
+</span><span>}
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;">// Footgun
+</span><span style="font-style:italic;color:#5c6773;">// type FlatResult&lt;T&gt; = T extends Array&lt;infer NewType&gt; ? FlatResult&lt;NewType&gt; : T
+</span><span style="font-style:italic;color:#5c6773;">// Type instantiation is excessively deep and possibly infinite.(2589)
+</span><span style="font-style:italic;color:#5c6773;">// function getFlatValue(item: NestedType): FlatResult&lt;NestedType&gt; | undefined{
+</span><span style="font-style:italic;color:#5c6773;">//     if (Array.isArray(item[0])){
+</span><span style="font-style:italic;color:#5c6773;">//         return undefined
+</span><span style="font-style:italic;color:#5c6773;">//     }
+</span><span style="font-style:italic;color:#5c6773;">//     return item[0]
+</span><span style="font-style:italic;color:#5c6773;">// }
+</span></code></pre>
+<p>Using Keys of Other Types</p>
+<pre data-lang="typescript" style="background-color:#0f1419;color:#bfbab0;" class="language-typescript "><code class="language-typescript" data-lang="typescript"><span style="font-style:italic;color:#5c6773;">// similar to built in partial
+</span><span style="color:#ff7733;">type </span><span style="color:#59c2ff;">MyPartial</span><span>&lt;</span><span style="color:#59c2ff;">T</span><span>&gt; </span><span style="color:#f29668;">= </span><span>{
+</span><span>    [</span><span style="color:#59c2ff;">Property </span><span style="color:#f29668;">in keyof </span><span style="color:#59c2ff;">T</span><span>]</span><span style="color:#f29668;">: </span><span style="color:#59c2ff;">T</span><span>[</span><span style="color:#f29668;">keyof </span><span style="color:#59c2ff;">T</span><span>] </span><span style="color:#f29668;">| </span><span style="font-style:italic;color:#39bae6;">undefined
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">type </span><span style="color:#59c2ff;">RequiredStuff </span><span style="color:#f29668;">= </span><span>{
+</span><span>    a</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string
+</span><span>    b</span><span style="color:#f29668;">: </span><span style="font-style:italic;color:#39bae6;">string
+</span><span>}
+</span><span>
+</span><span style="color:#ff7733;">type </span><span style="color:#59c2ff;">NoLongerRequiredStuff </span><span style="color:#f29668;">= </span><span style="color:#59c2ff;">MyPartial</span><span>&lt;</span><span style="color:#59c2ff;">RequiredStuff</span><span>&gt;
+</span><span>
+</span><span style="color:#ff7733;">const </span><span>example</span><span style="color:#f29668;">: </span><span style="color:#59c2ff;">NoLongerRequiredStuff </span><span style="color:#f29668;">= </span><span>{
+</span><span>    a</span><span style="color:#bfbab0cc;">: </span><span style="color:#f29718;">undefined</span><span style="color:#bfbab0cc;">,
+</span><span>    b</span><span style="color:#bfbab0cc;">: </span><span style="color:#f29718;">undefined
+</span><span>}
+</span></code></pre>
+<h2 id="end">End</h2>
+<p>I think this was a useful exercise in figuring out how the language I use all the time functions. Sometimes I would go and try to describe something and realize there is a gap in my understanding so I would go to the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN docs</a> to really make sure things worked they way I thought they did.</p>
+<p>There's a lot more to this language, but I think one of the interesting parts of typescript is that it prevents a lot of the stranger things that you can do in javascript. I learned a lot of stuff writing this that I left out because there's honestly no reason to use some of it, in my opinion.</p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>

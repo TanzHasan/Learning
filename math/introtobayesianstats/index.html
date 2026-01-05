@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="dark light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         Simple Bayesian Statistics
+        
+    </title>
+
+        
+            <meta property="og:title" content="Simple Bayesian Statistics" />
+        
+     
+
+     
+         
+     
+
+     
+         
+    
+
+    
+    
+
+    
+    
+        <link href=https://tanzhasan.github.io/Learning/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="Tanz" href="https://tanzhasan.github.io/Learning/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=https://tanzhasan.github.io/Learning/theme/light.css />
+        <link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://tanzhasan.github.io/Learning/theme/dark.css" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://tanzhasan.github.io/Learning/main.css />
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;tanzhasan.github.io&#x2F;Learning>Tanz</a>
+
+        <div class="socials">
+            
+            <a rel="me" href="https:&#x2F;&#x2F;github.com&#x2F;TanzHasan" class="social">
+                <img alt=github src=https://tanzhasan.github.io/Learning/social_icons/github.svg>
+            </a>
+            
+            <a rel="me" href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;tanzh&#x2F;" class="social">
+                <img alt=linkedin src=https://tanzhasan.github.io/Learning/social_icons/linkedin.svg>
+            </a>
+            
+            <a rel="me" href="https:&#x2F;&#x2F;rss.app&#x2F;feeds&#x2F;VmYCYbR38PvGQeNb.xml" class="social">
+                <img alt=rss src=https://tanzhasan.github.io/Learning/social_icons/rss.svg>
+            </a>
+            
+        </div>
+    </div>
+
+    <nav>
+        
+        <a href=https://tanzhasan.github.io/Learning/langs style="margin-left: 0.7em">&#x2F;Langs</a>
+        
+        <a href=https://tanzhasan.github.io/Learning/misc style="margin-left: 0.7em">&#x2F;Misc</a>
+        
+        <a href=https://tanzhasan.github.io/Learning/about style="margin-left: 0.7em">&#x2F;about</a>
+        
+
+        
+        <a id="dark-mode-toggle" onclick="toggleTheme(); event.preventDefault();" href="#">
+            <img src=https://tanzhasan.github.io/Learning/feather/sun.svg id="sun-icon" style="filter: invert(1);" alt="Light" />
+            <img src=https://tanzhasan.github.io/Learning/feather/moon.svg id="moon-icon" alt="Dark" />
+        </a>
+        <script src=https://tanzhasan.github.io/Learning/js/themetoggle.js></script>
+        
+    </nav>
+</header>
+
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        Simple Bayesian Statistics<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2024-03-28</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+            
+                <h1>Table of Contents</h1>
+                <ul>
+                
+                    <li>
+                        <a href="https://tanzhasan.github.io/Learning/math/introtobayesianstats/#counting-example">Counting Example</a>
+                        
+                    </li>
+                
+                    <li>
+                        <a href="https://tanzhasan.github.io/Learning/math/introtobayesianstats/#prior-distribution">Prior Distribution</a>
+                        
+                    </li>
+                
+                    <li>
+                        <a href="https://tanzhasan.github.io/Learning/math/introtobayesianstats/#posterior">Posterior</a>
+                        
+                    </li>
+                
+                </ul>
+            
+        
+
+        <section class="body">
+            <p>These are from old course notes</p>
+<h2 id="counting-example">Counting Example</h2>
+<p>Let's consider a bag with 4 balls. The probability of reaching in and grabbing a ball that is blue is p. I want to get the sequence Blue White Blue, sampling with replacement. How many ways are there to do this? With the below fractions its easy to count out the possibilities.</p>
+<table><thead><tr><th>p</th><th>Number of Ways</th><th>Plausibility</th></tr></thead><tbody>
+<tr><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>.25</td><td>3</td><td>.15</td></tr>
+<tr><td>.5</td><td>8</td><td>.4</td></tr>
+<tr><td>.75</td><td>9</td><td>.45</td></tr>
+<tr><td>1</td><td>0</td><td>0</td></tr>
+</tbody></table>
+<p>Now I want to find the plausibility of finding B W B B. How do I do this? We can take our existing count and multiply by the number of ways to find another B.</p>
+<table><thead><tr><th>p</th><th>Ways to Get BWB</th><th>Ways to get B</th><th>Plausibility</th></tr></thead><tbody>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>.25</td><td>3</td><td>1</td><td>3/46</td></tr>
+<tr><td>.5</td><td>8</td><td>2</td><td>16/46</td></tr>
+<tr><td>.75</td><td>9</td><td>3</td><td>27/46</td></tr>
+<tr><td>1</td><td>0</td><td>4</td><td>0</td></tr>
+</tbody></table>
+<h2 id="prior-distribution">Prior Distribution</h2>
+<p>A prior distribution could be any distribution (uniform, normal, lognormal etc).
+If we have some predictions to start with, we could also use a beta distribution. The Probability Density Function(PDF) for a Beta X ∼ Beta(a, b):</p>
+<p>$f(x)
+\begin{array}{cc}
+{ &amp;
+\begin{array}{cc}
+\frac{1}{B(a,b)}x^{a-1} &amp; 0&lt;x&lt;1 \
+0 &amp; \mathrm{otherwise}
+\end{array}
+\end{array}
+\mathrm{where ;}
+B(a,b)=\int_0^1 x^{a-1}(1-x)^{b-1}dx
+$</p>
+<p>In python:</p>
+<pre data-lang="python" style="background-color:#0f1419;color:#bfbab0;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ff7733;">import </span><span>scipy</span><span style="color:#f29668;">.</span><span>stats </span><span style="color:#ff7733;">as </span><span>stats
+</span><span style="color:#ff7733;">import </span><span>numpy </span><span style="color:#ff7733;">as </span><span>np
+</span><span>
+</span><span>grid_points </span><span style="color:#f29668;">= </span><span style="color:#f29718;">1000
+</span><span>p_grid </span><span style="color:#f29668;">= </span><span>np</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">linspace</span><span>(</span><span style="color:#f29718;">0</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29718;">1</span><span style="color:#bfbab0cc;">, </span><span>grid_points)
+</span><span>prior </span><span style="color:#f29668;">= </span><span>stats</span><span style="color:#f29668;">.</span><span>beta</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">pdf</span><span>(p_grid</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29718;">a</span><span style="color:#f29668;">=</span><span style="color:#f29718;">3</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29718;">b</span><span style="color:#f29668;">=</span><span style="color:#f29718;">1</span><span>)
+</span></code></pre>
+<h2 id="posterior">Posterior</h2>
+<p>Updating the prior is seemingly as simple as seen in the first example with the balls.</p>
+<pre data-lang="python" style="background-color:#0f1419;color:#bfbab0;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ff7733;">def </span><span style="color:#ffb454;">posterior_grid_approx</span><span>(</span><span style="color:#f29718;">grid_points</span><span style="color:#f29668;">=</span><span style="color:#f29718;">100</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29718;">success</span><span style="color:#f29668;">=</span><span style="color:#f29718;">6</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29718;">tosses</span><span style="color:#f29668;">=</span><span style="color:#f29718;">9</span><span>):
+</span><span>    p_grid </span><span style="color:#f29668;">= </span><span>np</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">linspace</span><span>(</span><span style="color:#f29718;">0</span><span style="color:#bfbab0cc;">, </span><span style="color:#f29718;">1</span><span style="color:#bfbab0cc;">, </span><span>grid_points)
+</span><span>    prior </span><span style="color:#f29668;">= </span><span>np</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">repeat</span><span>(</span><span style="color:#f29718;">5</span><span style="color:#bfbab0cc;">, </span><span>grid_points)
+</span><span>    likelihood </span><span style="color:#f29668;">= </span><span>stats</span><span style="color:#f29668;">.</span><span>binom</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">pmf</span><span>(success</span><span style="color:#bfbab0cc;">, </span><span>tosses</span><span style="color:#bfbab0cc;">, </span><span>p_grid)
+</span><span>    unorm_posterior </span><span style="color:#f29668;">= </span><span>likelihood </span><span style="color:#f29668;">* </span><span>prior
+</span><span>    posterior </span><span style="color:#f29668;">= </span><span>unorm_posterior </span><span style="color:#f29668;">/ </span><span>unorm_posterior</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">sum</span><span>()
+</span><span>    </span><span style="color:#ff7733;">return </span><span>p_grid, posterior
+</span></code></pre>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>

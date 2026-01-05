@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="dark light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         VTables
+        
+    </title>
+
+        
+            <meta property="og:title" content="VTables" />
+        
+     
+
+     
+         
+     
+
+     
+         
+    
+
+    
+    
+
+    
+    
+        <link href=https://tanzhasan.github.io/Learning/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="Tanz" href="https://tanzhasan.github.io/Learning/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=https://tanzhasan.github.io/Learning/theme/light.css />
+        <link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://tanzhasan.github.io/Learning/theme/dark.css" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://tanzhasan.github.io/Learning/main.css />
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;tanzhasan.github.io&#x2F;Learning>Tanz</a>
+
+        <div class="socials">
+            
+            <a rel="me" href="https:&#x2F;&#x2F;github.com&#x2F;TanzHasan" class="social">
+                <img alt=github src=https://tanzhasan.github.io/Learning/social_icons/github.svg>
+            </a>
+            
+            <a rel="me" href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;tanzh&#x2F;" class="social">
+                <img alt=linkedin src=https://tanzhasan.github.io/Learning/social_icons/linkedin.svg>
+            </a>
+            
+            <a rel="me" href="https:&#x2F;&#x2F;rss.app&#x2F;feeds&#x2F;VmYCYbR38PvGQeNb.xml" class="social">
+                <img alt=rss src=https://tanzhasan.github.io/Learning/social_icons/rss.svg>
+            </a>
+            
+        </div>
+    </div>
+
+    <nav>
+        
+        <a href=https://tanzhasan.github.io/Learning/langs style="margin-left: 0.7em">&#x2F;Langs</a>
+        
+        <a href=https://tanzhasan.github.io/Learning/misc style="margin-left: 0.7em">&#x2F;Misc</a>
+        
+        <a href=https://tanzhasan.github.io/Learning/about style="margin-left: 0.7em">&#x2F;about</a>
+        
+
+        
+        <a id="dark-mode-toggle" onclick="toggleTheme(); event.preventDefault();" href="#">
+            <img src=https://tanzhasan.github.io/Learning/feather/sun.svg id="sun-icon" style="filter: invert(1);" alt="Light" />
+            <img src=https://tanzhasan.github.io/Learning/feather/moon.svg id="moon-icon" alt="Dark" />
+        </a>
+        <script src=https://tanzhasan.github.io/Learning/js/themetoggle.js></script>
+        
+    </nav>
+</header>
+
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        VTables<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2024-03-28</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+            
+                <h1>Table of Contents</h1>
+                <ul>
+                
+                    <li>
+                        <a href="https://tanzhasan.github.io/Learning/langs/cpp/vtables/#how-does-virtual-work">How does Virtual Work?</a>
+                        
+                            <ul>
+                                
+                                    <li>
+                                        <a href="https://tanzhasan.github.io/Learning/langs/cpp/vtables/#what-are-vtables-and-how-are-they-represented">What are Vtables and how are they represented?</a>
+                                    </li>
+
+                                    
+                                
+                                    <li>
+                                        <a href="https://tanzhasan.github.io/Learning/langs/cpp/vtables/#why-are-virtual-functions-slow">Why are Virtual Functions slow?</a>
+                                    </li>
+
+                                    
+                                
+                            </ul>
+                        
+                    </li>
+                
+                </ul>
+            
+        
+
+        <section class="body">
+            <h1 id="how-does-virtual-work">How does Virtual Work?</h1>
+<h2 id="what-are-vtables-and-how-are-they-represented">What are Vtables and how are they represented?</h2>
+<p>VTables (or virtual tables) are arrays of pointers to virtual functions.
+They allow C++ to support dynamic dispatch (or run-time method binding).
+Virtual functions are member functions of a C++ class that can be redefined in a child class.
+A pointer to a vtable will exist as a datamember of all classes with virtual functions.
+When I call a virtual method, I lookup the object's v-table and call the appropriate derived class method.</p>
+<p>Essentially allows the below behavior:</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">#include </span><span style="color:#c2d94c;">&lt;iostream&gt;
+</span><span>
+</span><span style="color:#ff7733;">struct </span><span style="color:#59c2ff;">Base</span><span>{
+</span><span>    </span><span style="color:#ff7733;">virtual int </span><span style="color:#ffb454;">method</span><span>(){
+</span><span>        </span><span style="color:#ff7733;">return </span><span style="color:#f29718;">1</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">struct </span><span style="color:#59c2ff;">Derived</span><span style="color:#bfbab0cc;">: </span><span style="text-decoration:underline;color:#59c2ff;">Base</span><span>{
+</span><span>    </span><span style="color:#ff7733;">int </span><span style="color:#ffb454;">method</span><span>() </span><span style="color:#ff7733;">override</span><span>{
+</span><span>        </span><span style="color:#ff7733;">return </span><span style="color:#f29718;">2</span><span style="color:#bfbab0cc;">;
+</span><span>    }
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span><span>
+</span><span style="color:#ff7733;">int </span><span style="color:#ffb454;">main</span><span>(){
+</span><span>    Base</span><span style="color:#f29668;">*</span><span> a </span><span style="color:#f29668;">= </span><span style="color:#ff7733;">new </span><span style="color:#ffb454;">Derived</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">// output is 2
+</span><span>    std</span><span style="color:#f29668;">::</span><span>cout </span><span style="color:#f29668;">&lt;&lt;</span><span> a</span><span style="color:#f29668;">-&gt;</span><span style="color:#ffb454;">method</span><span>() </span><span style="color:#f29668;">&lt;&lt;</span><span> std</span><span style="color:#f29668;">::</span><span>endl</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="font-style:italic;color:#5c6773;">// The original can still be called with Base::method
+</span><span>}
+</span></code></pre>
+<p>So what does this look like under the hood? This is all compiler dependant but let's say I have the below code:</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">struct </span><span style="color:#59c2ff;">Base</span><span>{
+</span><span>    </span><span style="color:#ff7733;">virtual int </span><span style="color:#ffb454;">method</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ff7733;">virtual int </span><span style="color:#ffb454;">method2</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>    </span><span style="color:#ff7733;">virtual int </span><span style="color:#ffb454;">method3</span><span>()</span><span style="color:#bfbab0cc;">;
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span></code></pre>
+<p>The compiler builds a table containing 3 function-pointers. This is a relatively small space overhead. Every object of type base will have a pointer to this object.</p>
+<p>Now lets say we have a Derived class.</p>
+<pre data-lang="c++" style="background-color:#0f1419;color:#bfbab0;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#ff7733;">struct </span><span style="color:#59c2ff;">Derived</span><span style="color:#bfbab0cc;">: </span><span style="text-decoration:underline;color:#59c2ff;">Base </span><span>{
+</span><span>    </span><span style="color:#ff7733;">int </span><span style="color:#ffb454;">method</span><span>() </span><span style="color:#ff7733;">override</span><span style="color:#bfbab0cc;">;
+</span><span>}</span><span style="color:#bfbab0cc;">;
+</span></code></pre>
+<p>The compiler will build and store another static table in memory.
+Since we don't add any more virtual functions the table is still of size 3.
+Now, we can just use the same function pointers for method1 and method2, but we need to replace function pointer for method and any other things we might override.
+The pointer for derived class objects will be to this new vtable.</p>
+<p>When we try to call a virtual function we dereference the pointer and use the function pointer to call the function.
+This way we are able to figure out which function to use dynamically.
+A good explanation of what goes on under the hood and in the hardware can be found <a href="http://www.dietmar-kuehl.de/mirror/c++-faq/virtual-functions.html#faq-20.4">here</a>.
+Essentially there are three calls that go on in the hardware to fetch the location and load the function.</p>
+<h2 id="why-are-virtual-functions-slow">Why are Virtual Functions slow?</h2>
+<p>Virtual functions need the extra steps to load the function from a vtable.
+This naturally takes a little extra time.</p>
+<p>The real problem is that, since the compiler cannot know which functions are going to be called, it cannot inline or do many other optimizations.
+This is the primary cause of slowness and why templates are often used in settings where performance is critical.
+A stackexchange post going into more detail can be found <a href="https://softwareengineering.stackexchange.com/questions/191637/in-c-why-and-how-are-virtual-functions-slower">here</a>.</p>
+<p>Some work has been done for runtime optimizations that can decrease the impact of the lack of compile time optimization: <a href="https://learn.microsoft.com/en-us/cpp/build/profile-guided-optimizations?view=msvc-170">Profile Guided Optimization</a>.
+I am not very familiar with it but it can allow for optimizations where the optimizer uses data from test runs to determine areas that need to be optimized.</p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>

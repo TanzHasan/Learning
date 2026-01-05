@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="dark light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    
+    
+    
+    <title>
+         3104 - Find Longest Self Contained Substring
+        
+    </title>
+
+        
+            <meta property="og:title" content="3104 - Find Longest Self Contained Substring" />
+        
+     
+
+     
+         
+     
+
+     
+         
+    
+
+    
+    
+
+    
+    
+        <link href=https://tanzhasan.github.io/Learning/fonts.css rel="stylesheet" />
+    
+
+    
+    
+
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate" type="application/atom+xml" title="Tanz" href="https://tanzhasan.github.io/Learning/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet" type="text/css" href=https://tanzhasan.github.io/Learning/theme/light.css />
+        <link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://tanzhasan.github.io/Learning/theme/dark.css" />
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href=https://tanzhasan.github.io/Learning/main.css />
+
+    
+</head>
+
+
+<body>
+    <div class="content">
+        <header>
+    <div class="main">
+        <a href=https:&#x2F;&#x2F;tanzhasan.github.io&#x2F;Learning>Tanz</a>
+
+        <div class="socials">
+            
+            <a rel="me" href="https:&#x2F;&#x2F;github.com&#x2F;TanzHasan" class="social">
+                <img alt=github src=https://tanzhasan.github.io/Learning/social_icons/github.svg>
+            </a>
+            
+            <a rel="me" href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;tanzh&#x2F;" class="social">
+                <img alt=linkedin src=https://tanzhasan.github.io/Learning/social_icons/linkedin.svg>
+            </a>
+            
+            <a rel="me" href="https:&#x2F;&#x2F;rss.app&#x2F;feeds&#x2F;VmYCYbR38PvGQeNb.xml" class="social">
+                <img alt=rss src=https://tanzhasan.github.io/Learning/social_icons/rss.svg>
+            </a>
+            
+        </div>
+    </div>
+
+    <nav>
+        
+        <a href=https://tanzhasan.github.io/Learning/langs style="margin-left: 0.7em">&#x2F;Langs</a>
+        
+        <a href=https://tanzhasan.github.io/Learning/misc style="margin-left: 0.7em">&#x2F;Misc</a>
+        
+        <a href=https://tanzhasan.github.io/Learning/about style="margin-left: 0.7em">&#x2F;about</a>
+        
+
+        
+        <a id="dark-mode-toggle" onclick="toggleTheme(); event.preventDefault();" href="#">
+            <img src=https://tanzhasan.github.io/Learning/feather/sun.svg id="sun-icon" style="filter: invert(1);" alt="Light" />
+            <img src=https://tanzhasan.github.io/Learning/feather/moon.svg id="moon-icon" alt="Dark" />
+        </a>
+        <script src=https://tanzhasan.github.io/Learning/js/themetoggle.js></script>
+        
+    </nav>
+</header>
+
+
+        
+        
+    
+<main>
+    <article>
+        <div class="title">
+            
+            
+    <div class="page-header">
+        3104 - Find Longest Self Contained Substring<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2024-04-03</time>
+                    
+
+                    
+                </div>
+        </div>
+
+        
+
+        
+        
+            
+        
+
+        <section class="body">
+            <p><a href="https://leetcode.com/problems/find-longest-self-contained-substring/">3104 - Find Longest Self Contained Substring</a></p>
+<p>This problem was kind of trivial.
+Here is the writeup I posted to the leetcode discussions:</p>
+<p>Intuition
+A substring is valid if letters in the substring do not appear elsewhere. This means the first and last occurrence of a letter must be in the substring.</p>
+<p>Approach
+Go through the string. Keep track of the first and last occurrences of each letter. We are also using a prefix sum to quickly determine which letters have been used and at what index.
+Now, we can do combinations of the first and last occurrences of each letter. This is quadratic but since there are only 26 possibilities for letter combinations we are fine.</p>
+<p>Then we have to find which characters are used in the substring. This can be done by using a prefix sum and checking the counts of all the letters before and after the substring. These lines explain how:</p>
+<pre data-lang="python" style="background-color:#0f1419;color:#bfbab0;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ff7733;">for </span><span>k </span><span style="color:#ff7733;">in </span><span style="color:#f07178;">range</span><span>(</span><span style="color:#f29718;">26</span><span>):
+</span><span>    </span><span style="color:#ff7733;">if </span><span>start[k] </span><span style="color:#f29668;">!= </span><span>stop[k]:
+</span><span>        </span><span style="color:#ff7733;">if </span><span>stop[k] </span><span style="color:#f29668;">!= </span><span style="color:#f29718;">0</span><span>:
+</span><span>            bad </span><span style="color:#f29668;">= </span><span style="color:#f29718;">True
+</span><span>            </span><span style="color:#ff7733;">break
+</span><span>        diffs</span><span style="color:#f29668;">.</span><span style="color:#ffb454;">append</span><span>(k)
+</span></code></pre>
+<p>While doing this we also have to make sure that none of the letters used in the string have been used before and none are used after. These are checked in the below code on these lines</p>
+<pre data-lang="python" style="background-color:#0f1419;color:#bfbab0;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ff7733;">if </span><span>stop[k] </span><span style="color:#f29668;">!= </span><span style="color:#f29718;">0</span><span>:
+</span><span>    bad </span><span style="color:#f29668;">= </span><span style="color:#f29718;">True
+</span><span>    </span><span style="color:#ff7733;">break
+</span></code></pre>
+<p>and</p>
+<pre data-lang="python" style="background-color:#0f1419;color:#bfbab0;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#ff7733;">if </span><span>start[k] </span><span style="color:#f29668;">!= </span><span>prefix[</span><span style="color:#f29718;">0</span><span>][k]:
+</span><span>    bad </span><span style="color:#f29668;">= </span><span style="color:#f29718;">True
+</span><span>    </span><span style="color:#ff7733;">break
+</span></code></pre>
+<p>Time complexity:
+O(n * 676) or O(n * 26 * 26)</p>
+<p>Space complexity:
+O(n*26)</p>
+
+        </section>
+
+        
+
+    </article>
+</main>
+
+
+    </div>
+</body>
+
+</html>
